@@ -1,0 +1,102 @@
+
+
+#cartBox {
+    width : 30%;
+    border-top :5px solid #0088cc;
+    border-radius : 5px;
+    height : 300px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+#cartBox > #titleDiv{
+    display : flex;
+    justify-content : space-between;
+    padding : 20px;
+    font-family : sans-serif;
+    font-weight : bold;
+}
+
+#cartBox > #checkOutDiv{
+      text-align : center;
+      background: #0088cc;
+      color : white;
+      font-size : 18px;
+      font-family: sans-serif;
+      width : 90%;
+      margin : auto;
+      padding : 6px 0px;
+      border-radius : 3px;
+}
+
+   #cartBox > #scrollDiv{
+       width : 90%;
+       margin : auto;
+       overflow : auto;
+       height : 160px;
+   }
+#cartBox  #imgNamePriceDiv{
+    display : flex;
+    margin : auto;
+    margin-top : 30px;
+}
+
+#imgNamePriceDiv > div {
+     margin : 0px 20px;
+}
+
+#imgNamePriceDiv > div > div:nth-child(1){
+      color : #0088cc;
+}
+
+#imgNamePriceDiv > div > div:nth-child(2){
+    display : flex;
+    justify-content: space-around;
+    align-items : center;
+    font-weight : bold;
+    font-size : 20px;
+    padding : 20px;
+}
+
+#imgNamePriceDiv > div > div >div:nth-child(2){
+           font-size : 18px;
+           cursor : pointer;
+}
+ #cartBox > #scroll {
+     height : 300px;
+ }
+
+#cartBox  #imgNamePriceDiv img {
+      width : 70px;
+}
+
+#cartBox > #viewCartDiv{
+    width : 90%;
+    margin : auto;
+    text-align : center;
+    border : 1px solid black;
+    font-size : 18px;
+    padding : 8px 0px;
+    font-family: sans-serif;
+    color: #0088cc;
+    cursor : pointer;
+    
+}
+
+#cartBox > #viewCartDiv:hover{
+    text-decoration : underline;
+}
+
+@media all and (min-width: 450px) and (max-width : 850px){
+       #cartBox {
+           width : 60%;
+       }
+}
+
+@media all and (min-width: 50px) and (max-width : 451px){
+    #cartBox {
+        width : 90%;
+    }
+}
+
+

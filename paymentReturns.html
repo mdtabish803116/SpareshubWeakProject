@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./payment.css">
+</head>
+<body>
+    <div id = "shippingPayBox">
+        <div id = "shippingDiv">
+               <div id = "signShippingDiv1">
+                        <div class = "border"></div>
+                      <div id = "checkSign1">
+                             <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/twitter/154/heavy-check-mark_2714.png" alt="1" style = "width : 15px">
+                      </div>
+                        <div class = "border"></div>
+               </div>
+               <div>Shipping</div>
+        </div>
+        <div id = "payDiv">
+               <div id = "signShippingDiv2">
+                  <div class = "border"></div>
+                <div id = "checkSign2">
+                       <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/twitter/154/heavy-check-mark_2714.png" alt="1" style = "width : 15px">
+                </div>
+                <div class = "border"></div>
+               </div>
+               <div>Review & Payments</div>
+        </div>
+  </div>
+
+  <!-- payment Details -->
+    <div id = "paymentContainer">
+            <div id = "paymentDetails">
+                   <div>Payment Details</div>
+                   <hr></hr>
+                   <form id = "paymentForm">
+                            <label for="">Name</label>
+                            <input type = "text"placeholder = "Enter your name" id = "name"/>
+                            <label for="">Card Number</label>
+                            <input type="number" placeholder = "Enter Card Number" id = "cardNumber"/>
+                            <label for="">Cvv</label>
+                            <input type="number" placeholder = "Enter Cvv" id = "cvv"/>
+                            <label for="">Mobile Number</label>
+                            <input type="text" placeholder = "Enter Mobile Number" id = "mobileNumber"/>
+                            <input type="submit" id = "submitForm" value = "Make Payment">
+
+                   </form>
+                  
+            </div>
+            <div id = "shipToSummaryBox">
+                      <div id = "orderSummaryBox">
+                             <div>Order Summary</div>
+                             <hr></hr>
+                             <div id = "orderTotalDiv"></div>
+                             <div id = "itemsInCart"></div>
+                             <hr></hr>
+                             <div id = "appendShoppingItem"></div>
+                               
+                      </div>
+                     
+            </div>
+         
+    </div>
+    <div id = "shipToBox">
+       <div id = "shipToDiv">
+        <div>Ship To:</div>
+         <div id = "editShipping">🖍</div>
+       </div>
+       <hr></hr>
+       <div id = "shipToContent"></div>
+</div>
+</body>
+  <script src = "./paymentReturns.js"></script>
+</html>
