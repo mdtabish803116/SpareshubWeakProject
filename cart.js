@@ -92,7 +92,7 @@ var cartBox = document.createElement("div");
          var viewCartDiv = document.createElement("div");
              viewCartDiv.setAttribute("id" , "viewCartDiv");
              viewCartDiv.addEventListener("click" , function(){
-                 window.location.href = "./view.html";
+                 window.location.href = "./edit&view.html";
              })
            viewCartDiv.textContent = "VIEW AND EDIT CART";
 
