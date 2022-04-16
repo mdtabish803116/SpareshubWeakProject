@@ -1,0 +1,379 @@
+#shoppingTitle{
+   color : #0088cc;
+   margin-left : 10%;
+   font-size : 22px;
+   font-family : sans-serif;
+   margin-top : 60px;
+}
+
+#shoppingContainer{
+      width : 90%;
+    display : flex;
+    justify-content : space-evenly;
+    margin : auto;
+    font-family : sans-serif;
+}
+
+#shoppingContainer > #shoppingBox{
+    margin-top : 20px;
+         width : 60%;
+}
+
+#shoppingContainer > #shoppingBox  #cartTitle{
+     width : 95%;
+    display : flex;
+    margin : auto;
+    color : grey;
+
+}
+#shoppingContainer > #shoppingBox  #cartTitle > div{
+    width : 20%;
+
+}
+#shoppingContainer > #shoppingBox  #cartTitle > div:nth-child(1){
+    width : 80%;
+
+}
+
+#shoppingContainer #appendShoppingItem > #shoppingItem{
+       display : flex;
+       width : 95%;
+       margin : auto;
+       color : grey;
+       align-items : center;
+       height : 220px;
+}
+
+#shoppingContainer #appendShoppingItem > #shoppingItem > div{
+      width : 15%;
+}
+
+#shoppingContainer #appendShoppingItem > #shoppingItem > div:nth-child(1){
+    width : 57%;
+}
+
+#shoppingContainer #appendShoppingItem > #shoppingItem > #imgNameDiv{
+    display : flex;
+    align-items : center;
+}
+
+
+#shoppingContainer #appendShoppingItem > #shoppingItem > #imgNameDiv img{
+      border : 1px solid grey;
+       width : 150px;
+       margin-right : 8px;
+}
+#shoppingContainer #appendShoppingItem > #shoppingItem > #imgNameDiv > div , #shoppingContainer #appendShoppingItem > #shoppingItem >div:nth-child(4){
+    color : #0088cc;
+}
+
+#shoppingContainer #appendShoppingItem > #shoppingItem > #qtyDiv{
+    display : flex;
+    align-items : center;
+}
+
+#shoppingContainer #appendShoppingItem > #shoppingItem > #qtyDiv >div:nth-child(1){
+    border : 1px solid grey;
+    padding: 10px 15px;
+    margin-right : 2px;
+    border-radius : 3px;
+}
+
+#shoppingContainer #appendShoppingItem > #shoppingItem > #qtyDiv >div:nth-child(2)> div{
+    border : 1px solid grey;
+    font-size : 14px;
+    padding : 1px 8px;
+    margin-top : 1px;
+    border-radius : 3px;
+    cursor : pointer;
+    font-weight : bold;
+}
+
+#shoppingContainer #appendShoppingItem > #shoppingItem > #qtyDiv >div:nth-child(2) > div:hover{
+    color : #0088cc;
+}
+
+
+#shoppingContainer #appendShoppingItem  #editXDiv{
+     display : flex;
+     justify-content : right;
+     margin-right : 20px;
+}
+
+#shoppingContainer #appendShoppingItem  #editXDiv >div{
+    color: #0088cc;
+    cursor : pointer;
+    font-size : 18px;
+    margin-left : 20px;
+}
+#shoppingContainer #appendShoppingItem  #editXDiv >div:hover{
+     color : grey;
+}
+
+#shoppingContainer #lastDiv{
+    margin : 50px;
+    font-size : 18px;
+}
+
+#shoppingContainer #lastDiv > div{
+       display : flex;
+       margin-top: 3px;
+       border-radius: 5px;
+
+}
+#shoppingContainer #lastDiv > div:first-child{
+    color : #0088cc;
+}
+
+#shoppingContainer #lastDiv > div >input{
+    outline : none;
+    padding : 8px 5px;
+    font-size : 18px
+    
+
+}
+#shoppingContainer #lastDiv > div >div{
+  background: #0088cc;
+    padding : 8px 5px;
+     color : white;
+    cursor : pointer;
+    
+
+}
+/* summaryBox css */
+
+
+#shoppingContainer > #summaryBox{
+    border : 1px solid lightgrey;
+    width : 30%;
+
+    font-family : sans-serif;
+    height : 340px;
+    border-radius : 10px;
+    /* background-color  :#F5F5F5; */
+    background-color  :#FBFBF9;
+}
+
+#shoppingContainer > #summaryBox > div:nth-child(1){
+    font-size : 25px;
+    color : grey;
+    font-family : lighter;
+      
+}
+#shoppingContainer > #summaryBox > div{
+    padding : 20px;
+}
+#shoppingContainer > #summaryBox > hr{
+    width : 95%;
+    margin:auto;
+}
+#shoppingContainer  #summaryBox > #subTaxDiv{
+     padding : 0px 20px;
+    height : 60px;
+    display : flex;
+    flex-direction : column;
+    justify-content : space-around;
+    font-size : 14px;
+    color : grey;
+}
+
+#shoppingContainer  #summaryBox  #subTotalDiv , #shoppingContainer  #summaryBox  #TaxDiv ,#shoppingContainer  #summaryBox  #orderTotalDiv{
+       display : flex;
+       justify-content : space-between;
+}
+
+#shoppingContainer  #summaryBox  #orderTotalDiv > div:nth-child(1){
+      font-size : 22px;
+      color : grey;
+      font-weight: bold;
+      font-family : lighter;
+}
+#shoppingContainer  #summaryBox  #orderTotalDiv > div:nth-child(2){
+    font-size : 20px;
+    font-weight: bold;
+}
+
+#shoppingContainer  #summaryBox  >div:last-child{
+     padding : 10px 0px;
+     margin : 20px;
+    text-align : center;
+    background: #0088cc;
+    font-family: sans-serif;
+    border-radius : 3px;
+}
+
+#shoppingContainer  #summaryBox  >div:last-child>a{
+      text-decoration: none;
+      font-size : 14px;
+      color : white;
+}
+
+
+ /* media querry starts from here */
+
+@media all and (min-width: 951px) and (max-width : 1100px){
+    #shoppingContainer{
+        width : 100%;
+    }
+
+    #shoppingContainer > #shoppingBox{
+        margin-top : 20px;
+             width : 60%;
+    }
+
+    #shoppingContainer #lastDiv{
+        margin : 10px;
+        font-size : 18px;
+    }
+
+
+    #shoppingContainer > #summaryBox{
+        width : 40%;
+
+      
+    }
+}
+
+
+@media all and (min-width: 451px) and (max-width : 950px){
+    #shoppingContainer{
+        width : 100%;
+        flex-direction: column-reverse;
+        margin-bottom : 50px;
+
+    }
+
+    #shoppingContainer > #shoppingBox{
+        margin-top : 50px;
+             width : 100%;
+    }
+
+    #shoppingContainer > #shoppingBox  #cartTitle > div{
+        width : 30%;
+    
+    }
+    #shoppingContainer > #shoppingBox  #cartTitle > div:nth-child(1){
+        width : 70%;
+    
+    }
+    #shoppingContainer #appendShoppingItem > #shoppingItem > div{
+        width : 18%;
+        font-size : 12px;
+  }
+
+    #shoppingContainer #appendShoppingItem > #shoppingItem > div:nth-child(1){
+        width : 43%;
+    }
+
+    #shoppingContainer #appendShoppingItem > #shoppingItem > #imgNameDiv img{
+        border : 1px solid grey;
+         width : 100px;
+         margin-right : 2px;
+  }
+
+    #shoppingContainer #lastDiv{
+        margin : 10px;
+        font-size : 18px;
+    }
+
+
+    #shoppingContainer > #summaryBox{
+        width : 80%;
+        margin: auto;
+
+      
+    }
+
+}
+
+@media all and (min-width: 51px) and (max-width : 450px){
+    #shoppingContainer{
+        width : 100%;
+        flex-direction: column-reverse;
+        margin-bottom : 50px;
+
+    }
+
+    #shoppingContainer > #shoppingBox{
+        margin-top : 50px;
+             width : 100%;
+    }
+
+    #shoppingContainer > #shoppingBox  #cartTitle > div{
+        width : 30%;
+    
+    }
+    #shoppingContainer > #shoppingBox  #cartTitle > div:nth-child(1){
+        width : 70%;
+    
+    }
+    #shoppingContainer > #shoppingBox  #cartTitle > div:nth-child(2){
+        display : none;
+    
+    }
+
+    #shoppingContainer #appendShoppingItem > #shoppingItem{
+        height : 100px;
+    }
+
+    #shoppingContainer #appendShoppingItem > #shoppingItem > div{
+        width : 30%;
+        font-size : 12px;
+  }
+
+    #shoppingContainer #appendShoppingItem > #shoppingItem > div:nth-child(1){
+        width : 58%;
+    }
+
+    #shoppingContainer #appendShoppingItem > #shoppingItem > div:nth-child(2){
+        display : none;
+    }
+
+    #shoppingContainer #appendShoppingItem > #shoppingItem > #imgNameDiv img{
+        border : 1px solid grey;
+         width : 50px;
+  }
+
+  #shoppingContainer #appendShoppingItem > #shoppingItem > #qtyDiv >div:nth-child(1){
+    border : 1px solid grey;
+    padding: 5px 8px;
+    margin-right : 2px;
+    border-radius : 3px;
+}
+
+#shoppingContainer #appendShoppingItem > #shoppingItem > #qtyDiv >div:nth-child(2)> div{
+    border : 1px solid grey;
+    font-size : 10px;
+    padding : 0px 5px;
+    margin-top : 1px;
+    border-radius : 2px;
+    cursor : pointer;
+    font-weight : bold;
+}
+
+    #shoppingContainer #lastDiv{
+        width : 90%;
+        margin : auto;
+        margin-top : 40px;
+        font-size : 12px;
+
+
+    } 
+
+    #shoppingContainer #lastDiv >div input{
+        width : 60%;
+    }
+
+    #shoppingContainer > #summaryBox{
+        width : 100%;
+        margin: auto;
+        height : auto;
+
+      
+    }
+
+}
+
+
+
+

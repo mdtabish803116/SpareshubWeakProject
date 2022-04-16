@@ -1,0 +1,241 @@
+#shippingPayBox {
+    width : 30%;
+    display : flex;
+    margin-left : 10%;
+    margin-top : 50px;
+}
+
+#shippingPayBox #signShippingDiv1 , #shippingPayBox #signShippingDiv2{
+    display : flex;
+    align-items : center;
+}
+
+#shippingPayBox #checkSign1 ,#shippingPayBox #checkSign2 {
+    border : 6px solid #FF5501;
+    padding: 5px;
+    border-radius : 100%;
+}
+
+#shippingPayBox #checkSign2{
+    border-color : #E4E4E4;
+    font-size : 20px;
+    padding : 3px 7px;
+}
+
+#shippingPayBox  .border{
+    width : 70px;
+    height : 6px;
+    border : none;
+}
+#shippingPayBox #signShippingDiv1 .border{
+    background-color : #FF5501;
+}
+
+#shippingPayBox #signShippingDiv2 .border{
+    background-color : #E4E4E4;
+}
+
+#shippingPayBox #shippingDiv , #shippingPayBox #PayDiv{
+     display : flex;
+     flex-direction : column;
+     align-items : center;
+}
+
+#shippingPayBox #signShippingDiv1 + div , #shippingPayBox #signShippingDiv2 +div{
+       margin-top : 20px;
+       font-size : 18px;
+       font-family : sans-serif;
+}
+
+#shippingPayBox #signShippingDiv2 +div{
+      color : #E4E4E4;
+}
+
+/* css for checkOutContainer */
+#checkOutContainer{
+      width : 80%;
+     display : flex;
+     margin : auto;
+     justify-content : space-around;
+}
+#checkOutContainer #shippingContainer{
+     margin-top : 40px;
+      width : 60%;
+}
+#checkOutContainer #shippingContainer >div:first-child{
+      font-size : 25px;
+      font-family : sans-serif;
+      color : grey;
+}
+
+#checkOutContainer #shippingForm{
+      display : flex;
+      flex-direction: column;
+      width : 65%;
+      height : 840px;
+      justify-content : space-around;
+      margin-top : 30px;
+
+}
+
+#checkOutContainer #shippingForm > label{
+     font-size : 16px;
+     font-family : sans-serif;
+     color : grey;
+}
+
+#checkOutContainer #shippingForm > input{
+     border : 1px solid black;
+     height : 30px;
+     outline : none;
+     font-size : 16px;
+}
+
+#checkOutContainer #shippingForm #shippingNext{
+    margin : 0px auto;
+    margin-top: 30px;
+      background-color : #0088cc;
+      color : white;
+      font-size : 20px;
+      border-radius : 5px;
+      cursor : pointer;
+      height : 40px;
+      width : 30%;
+      text-align: center;
+    
+
+
+}
+
+/* css for ordersummaryBox */
+#checkOutContainer #orderSummaryBox{
+    width : 35%;
+    background-color : #DCDCDC;
+    height : 130px;
+    margin-top : 50px;
+}
+
+#orderSummaryBox  > div{
+     padding : 10px;
+}
+
+#orderSummaryBox > div:first-child{
+     font-size : 24px;
+
+}
+
+#orderSummaryBox > #itemsInCart{
+    display : flex;
+    justify-content : space-between;
+    font-size : 18px;
+    font-family : sans-serif;
+}
+#orderSummaryBox > #itemsInCart >div + div{
+     font-weight : bold;
+     font-size : 14px;
+     font-family : sans-serif;
+     cursor : pointer;
+}
+
+#orderSummaryBox  hr{
+    width : 95%;
+    margin:auto;
+}
+
+#orderSummaryBox > #appendShoppingItem{
+    height : auto;
+    background-color : #DCDCDC;
+}
+
+
+#orderSummaryBox #shoppingItemDiv{
+     display : flex;
+     width : 95%;
+     margin : auto;
+     justify-content : space-between;
+     align-items : center;
+     padding-top : 20px;
+}
+
+#orderSummaryBox #shoppingItemDiv > div{
+     width : 30%;
+}
+
+#orderSummaryBox #shoppingItemDiv > div:nth-child(2){
+      width : 50%;
+    
+}
+#orderSummaryBox #shoppingItemDiv > div:last-child{
+      width : 20%;
+      text-align: center;
+}
+#orderSummaryBox #shoppingItemDiv > div > img{
+    width : 90%;
+}
+
+
+/* mediaQuerry Start */
+  @media all and (min-width : 451px) and (max-width : 850px){
+
+    #shippingPayBox {
+        width : 30%;
+        display : flex;
+         flex-direction : column;
+         margin: auto;
+        margin-top : 70px;
+    }
+
+    #shippingPayBox #shippingDiv , #shippingPayBox #payDiv{
+              display : flex;
+              flex-direction : column;
+              align-items : center;
+              text-align : center;
+        
+    }
+    #checkOutContainer{
+          width : 95%;
+    }
+    #checkOutContainer #orderSummaryBox{
+        width : 45%;
+    }
+  }
+
+  @media all and (min-width : 51px) and (max-width : 450px){
+    #shippingPayBox{
+        display : none;
+    }
+
+    #checkOutContainer{
+       display : flex;
+       flex-direction : column-reverse;
+       margin-top : 80px;
+  }
+
+  #checkOutContainer #shippingContainer{
+    margin-top : 60px;
+     width : 100%;
+     }
+
+     #checkOutContainer #shippingForm{
+         width : 100%;
+         height : 900px;
+     }
+     #checkOutContainer #shippingForm >input{
+         border : 1px solid black;
+     }
+
+     #checkOutContainer #orderSummaryBox{
+        width : 100%;
+        background-color : #DCDCDC;
+        height : 130px;
+    }
+
+    #orderSummaryBox > #appendShoppingItem{
+        display : none;
+    }
+
+    #orderSummaryBox > #itemsInCart >div + div{
+        visibility : hidden;
+    }
+
+  }

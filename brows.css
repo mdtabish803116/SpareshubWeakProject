@@ -1,0 +1,101 @@
+#browsContainer > h2{
+    font-size : 25px;
+     padding-left : 120px;
+     color : grey;
+     font-family : sans-serif;
+}
+
+#browsContainer > #brows {
+  width : 78%;
+  display : grid;
+  gap : 30px 0px;
+  grid-template-columns : repeat(6 , 1fr);
+  margin: auto;
+  margin-top : 30px;
+  margin-bottom : 30px;
+}
+
+#browsContainer > #brows > img {
+     width : 100px;
+     border-radius : 100%;
+}
+
+#browsContainer > #brows > img:hover{
+  transform:scale(1.2);
+}
+
+#browsContainer > #bestCar{
+  width : 70%;
+  margin-left : 160px;
+  display : grid;
+  gap : 6px 30px;
+  grid-template-columns: repeat(3 , 1fr);
+}
+
+#browsContainer > #bestCar > img {
+   width : 100%;
+   height : 110px;
+}
+
+
+@media all and (min-width: 450px) and (max-width: 850px){
+
+  #browsContainer > h2{
+      font-size : 20px;
+       padding-left : 20px;
+
+}
+
+  #browsContainer > #brows {
+      width : 90%;
+      grid-template-columns : repeat(4 , 1fr);
+  }
+  #browsContainer > #brows > img {
+      width : 80px;
+
+}
+
+  #browsContainer > #bestCar{
+      width : 70%;
+      grid-template-columns : repeat(2 , 1fr);
+      margin : auto;
+  }
+
+  #browsContainer > #bestCar > img {
+      width : 100%;
+      height : 110px;
+ }
+
+}
+
+
+@media all and (min-width: 50px) and (max-width: 451px){
+
+  #browsContainer > h2{
+      font-size : 18px;
+       padding-left : 10px;
+
+}
+
+  #browsContainer > #brows {
+      width : 90%;
+      grid-template-columns : repeat(3 , 1fr);
+      gap : 20px;
+      margin : auto;
+  }
+  #browsContainer > #brows > img {
+      width : 60px;
+
+}
+
+  #browsContainer > #bestCar{
+      width : 100%;
+      grid-template-columns : repeat(1 , 1fr);
+      margin : auto;
+  }
+
+  #browsContainer > #bestCar > img {
+      width : 100%;
+      height : 110px;
+ }
+}
