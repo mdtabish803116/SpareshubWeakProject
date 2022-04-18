@@ -541,232 +541,27 @@
 <!-- footer part -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <title>Footer</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
-        .footer {
-            background-color: rgb(44, 43, 43);
-            color: white;
-            width: 100%;
-            margin-top: 80px;
-            font-family: Arial, Helvetica, sans-serif;
-
-        }
-        
-        .upperFooter {
-            width: 1350px;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            margin: auto;
-        }
-        
-        .innerFooter {
-            width: 330px;
-            height: 300px;
-            margin-top: 30px;
-        }
-        
-        .innerFooter a {
-            content: "\f095";
-            display: block;
-            width: 100%;
-            margin: 20px 0;
-            color: white;
-            text-decoration: none;
-        }
-        
-        .innerFooter a:hover {
-            text-decoration: underline;
-        }
-        
-        .innerFooter input:last-child:hover {
-            cursor: pointer;
-        }
-        
-        
-        .innerFooter p {
-            color: gray;
-        }
-        
-        
-        #innerfooter1 {
-            width: 90%;
-            margin-bottom: 80px;
-        }
-
-        #innerFooter2 input {
-            margin-right: -10px;
-            width: 60%;
-            height: 35px;
-            border-radius: 10px 0 0 10px;
-        }
-        
-        #innerFooter2 input:last-child {
-            width: 100px;
-            height: 40px;
-            color: white;
-            border-radius: 0 10px 10px 0;
-            background-color: rgb(33, 164, 211);
-        }
-        
-        .blowFooter {
-            background-color: rgba(0, 0, 0, 0.882);
-            text-align: center;
-            display: flex;
-            align-items: center;
-        }
-        
-        .blowFooter p {
-            margin: auto;
-            width: 1350px;
-            margin: 40px auto;
-            color: gray;
-        }
-        
-        .spareshub {
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            top: 60px;
-            background-color: rgb(33, 164, 211);
-        }
-        
-        .spareshub::before {
-            
-            content: '';
-            display: block;
-            width: 7px;
-            height: 0px;
-            position: absolute;
-            left: -16px;
-            top: 0;
-            border-right: 10px solid #069;
-            border-right-width: 10px;
-            border-right-style: solid;
-            border-right-color: rgb(0, 102, 153);
-            border-top: 16px solid transparent;
-            border-top-width: 20px;
-            border-top-style: solid;
-            border-top-color: transparent;
-        }
-        
-        .spareshub span{
-            text-align: center;
-            font-size: 150%;
-            margin: 0 20px;
-            font-family: 'Shadows Into Light', cursive;
-        }
-        
-        
-        @media all and (min-width: 1098px) and (max-width: 1420px){
-            .blowFooter p {
-                width: 1020px;
-            }
-            .upperFooter {
-                width: 1020px;
-            }
-            .innerFooter {
-                width: 250px;
-            }
-        }
-        
-        @media all and (min-width: 820px) and (max-width: 1097px){
-            
-            .upperFooter {
-                width: 750px;
-                padding-top: 30px;
-                display: block;
-            }
-            .innerFooter{
-                height: auto;
-                width: 350px;
-            }
-            .blowFooter p {
-                width: 750px;
-            }
-            .innerFooter:last-child{
-                margin-top: 70px;
-            }
-            
-            #innerFooter2 input {
-                width: 70%;
-            }
-        }
-        
-        @media all and (min-width: 640px) and (max-width: 819px){
-            
-            .upperFooter {
-                width: 540px;
-                padding-top: 30px;
-                display: block;
-            }
-            .innerFooter{
-                height: auto;
-                width: 350px;
-            }
-            .blowFooter p {
-                width: 540px;
-            }
-            .innerFooter:last-child{
-                margin-top: 70px;
-            }
-            
-            #innerFooter2 input {
-                width: 70%;
-            }
-        }
-        @media all and (min-width: 80px) and (max-width: 639px){
-            .footer{
-                width: 100%;
-            }
-            .upperFooter {
-                width: 90%;
-                padding-top: 30px;
-                display: block;
-                margin-left: 20px;
-            }
-            .innerFooter{
-                height: auto;
-                width: 100%;
-            }
-            .blowFooter p {
-                width: 90%;
-            }
-            .innerFooter:last-child{
-                margin-top: 70px;
-            }
-            
-            #innerFooter2 input:nth-child(1) {
-                width: 40%;
-            }
-
-            #innerFooter2 input:nth-child(2) {
-                width: 40%;
-            }
-        }
-        </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="footer.css">
 </head>
-
 <body>
+
     <div class="footer">
         <div class="upperFooter">
-        <div class="spareshub"> <span>Spareshub</span>
-    </div>
+            <div class="spareshub"> <span>Spareshub</span></div>
+        </div>
+        <div class="upperFooter">
             <div class="innerFooter">
                 <a href="about.html">About Us</a>
                 <a href="">Contect Us</a>
                 <a href="">Call us - <i class='fab fa-whatsapp'>&#xf095;</i> 9307901458</a>
                 <a href="">Whatsapp us - <i class='fab'>&#xf232;</i> 9307901458</a>
                 <a href="">Email us - ✉ care@spareshub.com</a>
-                
+
             </div>
             <div class="innerFooter">
                 <a href="#">Franchise</a>
@@ -786,17 +581,17 @@
                     <h3>Be the First to Know</h3>
                     <p>Get all the latest information on Events,
                         Sales and Offers. Sign up for newsletter today.</p>
-                        
-                    </div>
-                    <div id="innerFooter2">
-                        <p>Enter your email address</p>
-                        <form action="">
-                            <input type="email">    
-                            <input type="submit" value="Subscribe">
-                        </form>
-                    </div>
+
                 </div>
-                
+                <div id="innerFooter2">
+                    <p>Enter your email address</p>
+                    <form action="">
+                        <input type="email">
+                        <input type="submit" value="Subscribe">
+                    </form>
+                </div>
+            </div>
+
         </div>
         <div class="blowFooter">
             <p>
@@ -809,6 +604,6 @@
             </p>
         </div>
     </div>
-</body>
 
+</body>
 </html>

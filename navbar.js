@@ -40,4 +40,12 @@
         window.location.href = "./careers.html";
     })
 
+    document.getElementById("logo").addEventListener("click" , function(){
+        window.location.href = "./index.html";
+})
+
+document.getElementById("mobLogo").addEventListener("click" , function(){
+        window.location.href = "./index.html";
+})
+
     
