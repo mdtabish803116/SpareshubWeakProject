@@ -20,7 +20,7 @@ var shippingDiv = document.querySelector("#shippingDiv > div:last-child");
                 alert("Card Number must be of 16 digit !");
        }else {
              alert("payment Successful");
-             window.location.href = "#";
+             window.location.href = "./index.html";
        }
        
      })
