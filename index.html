@@ -1,3 +1,495 @@
+<!-- starting fo navbr  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spareshub</title>
+    <link rel="stylesheet" href="./cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        #mobile{
+            display:none;
+        }
+        #welcome {
+            height: 28px;
+            margin: none;
+            width: 100%;
+            margin: none;
+            margin-left: -7px;
+            background-color: #f0f0f0;
+            font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin-top: 0px;
+            padding-top: 8px;
+        }
+
+        #underWelcome {
+            width: 36%;
+            height: 25px;
+            margin-left: 55%;
+            font-size: 10.5px;
+            margin-top: -3px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #welcome p {
+            text-align: left;
+            height: 0px;
+            color: #2888CD;
+            cursor: pointer;
+        }
+
+        #welcome p:hover {
+            text-decoration: underline;
+        }
+
+        #main {
+            height: 100px;
+            margin-left: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #logowithsearch {
+            /* border: 1px solid green; */
+            width: 50%;
+            height: 50px;
+            margin-top: 25px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #logowithsearch #search {
+            border: 1px solid #9999;
+            width: 60%;
+            border-radius: 30px;
+            height: 35px;
+            margin-top: 5px;
+        }
+
+        #search input:focus {
+            outline: none;
+        }
+
+        #contactwithcart {
+            width: 30%;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #navContact {
+            width: 70%;
+        }
+
+        #navContact p {
+            height: 7px;
+            font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 15px;
+        }
+
+        #navCart {
+            width: 30%;
+            margin-right: 20px;
+            cursor : pointer;
+        }
+
+        #cartIcon {
+            width: 50px;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        #itemInCart {
+            position: absolute;
+            margin-left: 20px;
+            margin-top: -30px;
+            color: white;
+        }
+
+        #afterMain {
+            height: 35px;
+            display: flex;
+            background-color: #f0f0f0;
+            font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        #underAfterMain{
+            display: flex;
+            width: 45%;
+            justify-content: space-between;
+            /* margin-top: -10px; */
+            margin-left: 40px;
+        }
+
+        #underAfterMain button{
+            color: #2888CD;
+            cursor: pointer;
+            font-size: 12px;
+            border: none;
+            border-radius: 3px;
+        }
+
+        #brandBox{
+            width: 70%;
+            height: 300px;
+            display: none;
+            background-color: #2888CD;
+            margin-left: 100px;
+            z-index : 2;
+        }
+
+        #categoriesBox{
+            width: 70%;
+            height: 300px;
+            display: none;
+            background-color: #2888CD;
+            margin-left: 100px;
+            z-index : 2;
+        }
+
+        #manufacturesBox{
+            width: 70%;
+            height: 300px;
+            display: none;
+            background-color: #2888CD;
+            margin-left: 100px;
+            z-index : 2;
+        }
+
+        #brandText p{
+            text-align: center;
+        }
+
+        #underAfterMain button:hover{
+            background-color: #2888CD;
+            color: white;
+        }
+
+        #mobile #mobCart , #mobile #mobLogo , #main #logo{
+            cursor : pointer;
+        }
+
+        @media  (max-width: 800px){
+            #deskNav{
+                display: none;
+            }
+
+            #mobile{
+                display: contents;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="deskNav">
+        <div id="upline"
+            style="height: 3px; background-color: #2888CD; width: 100%;margin: auto; margin-top: -7.7px; margin-left: -7px;">
+        </div>
+        <div id="welcome">
+            <div id="underWelcome">
+                <p style="color: #777; height: 0px; cursor: text; text-decoration: none;">WELCOME AT SPARESHUB.COM!</p>
+                <p style="color: #777;">|</p>
+                <p id="contact">CONTACT US</p>
+                <p style="color: #777;">|</p>
+                <p id="signin">SIGN IN</p>
+                <p style="color: #777;">|</p>
+                <p id="createAccount">CREATE ACCOUNT</p>
+            </div>
+        </div>
+
+        <div id="main">
+            <div id="logowithsearch">
+                <div id="logo">
+                    <img src="https://spareshub.com/pub/media/logo/stores/1/200x50xlogo.png.pagespeed.ic.3_mBb67eog.webp"
+                        alt="">
+                </div>
+                <div id="search" style="display: flex; justify-content: space-between;">
+                    <input id=searchbox type="text" placeholder="Search entire store here..."
+                        style="border: none; background-color: transparent; margin-left: 15px; margin-top: 0px; color: #656464;">
+                    <img src="https://i.ibb.co/4MPMFh4/search.png" alt="" id="searchimg"
+                        style="margin: 5px 5px 5px; border-left: 1px solid #9999; padding-left: 3px; cursor: pointer;">
+                </div>
+            </div>
+            <div id="contactwithcart">
+                <div id="navContact">
+                    <p id="callus">Call us - <span style="color: #2888CD;">919307901479</span></p>
+                    <p id="whatsappus">Whatsapp us -<span style="color: #2888CD;"> 9307901458</span> </p>
+                    <p id="emailus">Email us - <span style="color: #2888CD;">care@spareshub.com</span></p>
+                </div>
+                <div id="navCart">
+                    <img src="https://i.ibb.co/7QqbSmG/bag.png" alt="" id="cartIcon">
+                    <p id='itemInCart'>0</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="afterMain">
+            <div id="underAfterMain">
+                <button id="brands" onpointerenter="brands()" onpointerleave="brandsLeave()">BRANDS
+                    <i class = "fas fa-caret-down"></i>
+                </button>
+                <button id="categories" onpointerenter="categories()" onpointerleave="categoriesLeave()">CATEGORIES
+                    <i class = "fas fa-caret-down"></i>
+                </button>
+                <button id="manufactures" onpointerenter="manufactures()" onpointerleave="manufacturesLeave()">MANUFACTURES
+                    <i class = "fas fa-caret-down"></i>
+                </button>
+                <button id="careers">CAREERS</button>
+            </div>
+        </div>
+
+        <div id="brandBox" style="position: absolute;">
+            <div id="brandImg" style="width: 30%; margin: 10px; color: white; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                <img src="https://spareshub.com/pub/media/wysiwyg/xbrandnav.png.pagespeed.ic.66n8dmBy5h.webp" alt="">
+                <p>Car Brands
+                    Get replacement parts for any car brand and model at SparesHub.com...</p>
+            </div>
+            <div id="brandText" style="width: 70%; margin: 10px; color: white; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; display: grid; grid-template-columns: repeat(4,1fr); justify-content: space-around;">
+                <P>AUDI</P>
+                <p>BMW</p>
+                <P>CHEVROLET</P>
+                <p>DAEWOO</p>
+                <P>CHEVROLET</P>
+                <p>DAEWOO</p>
+                <P>DASTUN</P>
+                <p>FIAT</p>
+                <P>FORCE MOTORS</P>
+                <p>FORD</p>
+                <P>LAND ROVER</P>
+                <p>HONDA</p>
+                <P>ICML</P>
+                <p>JAGUAR</p>
+                <P>HINDUSTAN MOTORS</P>
+                <p>JEEP</p>
+            </div>
+        </div>
+
+        <div id="categoriesBox" style="position: absolute;">
+            <div id="brandImg" style="width: 30%; margin: 10px; color: white; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                <img src="https://spareshub.com/pub/media/wysiwyg/xcategory_megamenu.png.pagespeed.ic.1v0mmxg-32.webp" alt="">
+                <p>Car Brands
+                    Get replacement parts for any car brand and model at SparesHub.com...</p>
+            </div>
+            <div id="brandText" style="width: 70%; margin: 10px; color: white; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; display: grid; grid-template-columns: repeat(4,1fr); justify-content: space-around;">
+                <P>BUSHES</P>
+                <p>BELTS</p>
+                <P>BODY PARTS</P>
+                <p>BRACKING SYSTEM</p>
+                <P>CLUTCH SYSTEM</P>
+                <p>ELECTRICALS</p>
+                <P>ENGINE PARTS</P>
+                <p>FILTERS</p>
+                <P>STEERING SYSTEM</P>
+                <p>HEETING & COOLING</p>
+                <P>LIGHTING SYSTEM</P>
+                <p>LUBES AND FLUIDS</p>
+                <P>SENSORS</P>
+                <p>SUPENSION SYSTEM</p>
+                <P>TRANSMISSION</P>
+                <p>UNKNOWN</p>
+            </div>
+        </div>
+
+        <div id="manufacturesBox" style="position: absolute;">
+            <div id="brandText" style="width: 100%; margin: 10px; color: white; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; display: grid; grid-template-columns: repeat(7,1fr); justify-content: space-around;">
+                <P>BRAVO</P>
+                <p>BANCO</p>
+                <P>FORD</P>
+                <p>BANDO</p>
+                <P>BOSCH</P>
+                <p>BREMBO</p>
+                <P>COFAP</P>
+                <p>GSP</p>
+                <P>KYB</P>
+                <p>NACHI</p>
+                <P>NISSAN</P>
+                <p>ZIP</p>
+                <P>LUK</P>
+                <p>MEYLE</p>
+                <P>NEOLITE</P>
+                <p>NWK</p>
+                <p>NACHI</p>
+                <P>NISSAN</P>
+                <p>ZIP</p>
+                <P>LUK</P>
+                <p>MEYLE</p>
+                <P>NEOLITE</P>
+                <p>NWK</p>
+                <P>FORD</P>
+                <p>BANDO</p>
+                <P>BOSCH</P>
+                <p>BREMBO</p>
+                <P>COFAP</P>
+                <p>GSP</p>
+                <P>NEOLITE</P>
+                <p>NWK</p>
+                <P>FORD</P>
+                <p>BANDO</p>
+                <P>LUK</P>
+                <p>MEYLE</p>
+            </div>
+        </div>
+
+        <div id="lowerNev" style="display: flex; width: 80%; margin: auto; margin-top: 15px; font-size: 14px; margin-bottom: 30px; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #777; height: 30px;">
+            <div id="l1" style="display: flex; width: 18.5%; justify-content: space-between;">
+                <img src="data:image/webp;base64,UklGRrQBAABXRUJQVlA4TKgBAAAvIMAHEJ9jkG2k+iM87u0hZmSsDSZtG1vSblPktm2DnGbLfANzAwBEIQQQvLmyJACgEEKAYBFcIIBABAAEBwBAATYbFsXjIC4rggUQh4bGj5UYBQiECBaLgMW3jLCr3m0AsmzbNu1qxNmxru+N84zYtm0711r1/zrYqwgR/Z+ABbH+he3m67T/WZm2u8G/UYqv+qgp/FOZFuNFY4Va9dyS8oxXQLJJ1bz4+YnqtEXnT+smq0OxXrM6uwgExuRbIBAIjMm3QOBl0+4Mfkoc4KfE4cFrSupdTkrJZFYyyWQymZVMMlne8OiawmVgyXaxx8PpUJ2WzdROpHp9f/9YLvdVb2X47DQRkLsz1Ts5PzvbBQjIMKrDYnB3icSAoXowg0AipLB3AvXyHyakFq52FEbGwcgwTIuBm31/zeU/uOqE12aqCFbCyHqv0l1KJo0x5rsk03U697+fxb3/rVUHHo6Hr5+Gt8SA2hL7N0z7mJJ6uN7zteJWB0x3QNcE8KPPz/WBYzmLvdd8qXv/pv1zh5a8aH5Aw2Pq7es9FaZqdFrzL9C2nSseRVEH" alt="">
+                <p style="margin-top: 6px;">LARGEST COLLECTION </p>
+            </div>
+            <div id="l2" style="display: flex; width: 28%; justify-content: space-between; margin-left: 30px;">
+                <img src="data:image/webp;base64,UklGRgYCAABXRUJQVlA4TPkBAAAvFwAIEPejoG0bxvwhjG33MMzIWDNu20ZybCXN/VqySRuyF/sGvhoAAARpL0EMDASwwA4TIAggAie4eAgDteCxIPwQQIAwMSDAABBv5AghgIWBNWgU9f4T3LgABkBjHcbyQEC0bdt0s5Patm3btvFQI7adt3++L/dVHxDR/wmAYMP7ewOM1uys9S/EotHYQv/aTo3IOUlaGhosJHkuUBqVWqdXi4Hi1elWKVqao/iIwzCPHt9tF/eaMcyj4i/VJxG+mPrszLr2l2gfMr0wclIN7FKZMNdqvo0yIH/Vp62bJxTuApusR8faXAV0Kx+0AdRzExjmWJ7DjtyVXod5jMPAPBcnuCyAFY4vch51EXvZabpYpChzWmaP1D0n2iBbIWyT0JZ4dgZrINvF7DJqgs725FP+RbxQpDB+kf+UbMc252c4IzLDmXluA/2cLPRZinIVWXyFk+wHVtmCWd4V6BXccRYtXAX2eNGMA74NmgDT4BsP0HTBPaBRyvIWSyH6VdXP0BJumZUaAaD2hp0o37p/fb3fKkcnb2qhX5W6LGrtMQGm3taiy1QVcl9rJJWqKoWkdg3BxrBt/SDr8WQP1m3hRhF8yEB/INAPyB8whLIyfJPuf1ByeFjyLSNu0j1i7PGKvqkpH68ejVA7KwPKzjQakD67odv1KekBAA==" alt="">
+                <p style="margin-top: 6px;">HIGH QUALITY PARTS WITH WARRANTY </p>
+            </div>
+            <div id="l3" style="display: flex; width: 23%; justify-content: space-between; margin-left: 30px;">
+                <img src="data:image/webp;base64,UklGRnwCAABXRUJQVlA4THACAAAvHQAIEE/EoG0bQeYP4dn+0uMwI2PNsG3byLFKcu9R5LZtg5xGB/0NnG8AQAAAhAAE19387vUSAhAlwLBzJcsFIcCWhh9s4ceNlTEVBrA/xqonzJsDF0GAMAAxDECUPNOrGiMABEmSTVt1v23btm3btm3rGb3up7+EiP5PAL4jr37nG3JzG+Z/ryIJPONeft5nBBLUbdFj9cTx7e3xRPWjLF1B/oR1PEp7UfiM2pMeWkM9oqr6d36ljzYgxiMGaPuQfrZ6q6IuJOm+JxwY0dPKypNGgPCee0m6+NZyXzZA4r587icCZPct69vlBIzUplWbzM0lnZ0lzWbZVptSDcDh0h8wLcm9nYbXtG23pGngTxJwruvhTPzMHL7WOeCQRRFwq3y8FhR4QL5uIUKWZ2XBpQq9TUx4K9QlZOn5VHVwrBpvj4/eanUMdTqd1TgsagBC5+V1PhQGtAjjmm3RCfRpDaDhR/ppAFhTH5yoJcFtCSdP7x7cSXd4viuPMIs7gRs1YnyoCEhzjY250oAifRjU6wYGtQtTWgVaSqG0BVjVFOxrEOLszmRSnPYM/MywO1NIcdjjgC3NwKr2/TnQKixoCyDHbUsl3qR2X+0yxZNqc+d4sKFN6JC1wFuBVR1wpA28JprUAEv6zvXI/dYSNMmU6I1efcUTfKjfcij/1WEw6b/qxadxpuswQnblHBpyajeEsBudGb6IfdWmgTHpltyTBsG7eo3F31yT1oOh8u2tEoLXZMrF/zKrtkIgOBhCtmQtI9BKky5jAaIvZKok8MJPvRRD0as+C/nPpBs5x0cduknif0PmJGkuhH+veH6uwH8=" alt="">
+                <p style="margin-top: 6px;">SSL CERTIFIED TRANSACTION </p>
+            </div>
+            <div id="l4" style="display: flex; width: 17%; justify-content: space-between; margin-left: 30px;">
+                <img src="data:image/webp;base64,UklGRiYCAABXRUJQVlA4TBoCAAAvIoAIECdjkG2k+iM87v0gZmSsGbZtGzlYyXnauyM44NwACAAAECIIBAABKIBCAxSA7whAQYAGCEQDiMa/X0JImxgIUAjEYDEAYPCv0BAaIhDBIigAMAABCIQQAAAItm2bkU61bdu2bTvlipN+859EJ+9n9Qgi+s/AbdtGVm/vs5NHoNG0cPVWiySqvV0tNJGJ3mtHROyCVbBFxLnuNa+1nIfi3i51MbwEXUu3roTnLYZpqCj2fivA6SsArfu2FIfUac6Xu6FZVA2OddyJP6dNYbzJWl7X5SNsxmF6DPnxCklm2hfPUFiJ/aHk3YqySYrPU3Q2pZi42bnckeawaBB3cg70hnaHYlC/jKhrdQ0ddtgL17JPcYMUX+eqLp7Zl2uaHLeVyU5S7JVymvpGaXWdpgW5RaXndwIDt7JwJcvovF+ZtCxXb9KFznqlDp0ueavZmF4lnsaAXYsKj5b1M4XC0w0pur8t66OtEIm1vLOz3a3puEqK5q2dnfV6S6ICBhaDMwwUIuPuxfAc827TZcvhEZgvM/ixGh9CBj90V1ejXSCDq02O18p4D8BGtIGBnnFaPaeJazng++hv+jVOHH1zINfJnDbmYDhaNZ+Wa0zmlHN5SOS2nyzcy7m5ZiBDzZgrD8yVp9fvSlmv35OXZP3qXeBhYF5X/2THg/hzxl5yYOglB7YUhzJ0JO92OdWRlm+9REf6x772H90R" alt="">
+                <p style="margin-top: 6px;">ON - TIME DELIVERY</p>
+            </div>
+        </div>
+        
+    </div>
+
+
+
+    <div id="mobile">
+        <div id="upline"
+            style="height: 3px; background-color: #2888CD; width: 100%;margin: auto; margin-top: -7.7px; margin-left: -7px;">
+        </div>
+        <div id="mobMain" style="display: flex; height: 50px;  justify-content: space-around; margin-top: 20px;">
+
+            <div id="mobLogo">
+                <img src="https://spareshub.com/pub/media/logo/stores/1/200x50xlogo.png.pagespeed.ic.3_mBb67eog.webp" alt="">
+            </div>
+
+            <div id="mobSearchMenuCart" style="display: flex; justify-content: space-between; margin-right: 8%;cursor: pointer;">
+                <div id="mobSearch">
+                    <img style="width: 30px; margin-top: 10px;" src="https://i.ibb.co/4MPMFh4/search.png" alt="">
+                </div>
+                <div id="mobMenu">
+                    <img style="width: 25px; margin-top: 10px; margin-left: 70%;cursor: pointer;" src="https://i.ibb.co/h2QbFWy/menu.png" alt="">
+                </div>
+                <div id="mobCart">
+                    <img style="width: 35px; margin-top: 5px; margin-left: 100%; cursor: pointer;" src="https://i.ibb.co/7QqbSmG/bag.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div id="mobAfterMenu" style="width: 60%; height: 200px;  margin: auto; margin-top : 30px;color: #777; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            <div id="mobl1" style="display: flex;">
+                <img style="height: 30px; margin-top: 10px; margin-right: 15px;" src="https://spareshub.com/pub/media/wysiwyg/xlargest_collection.png.pagespeed.ic.Hd9e6PSBf6.webp" alt="">
+                <p>LARGEST COLLECTION</p>
+            </div>
+            <div style = "display: flex;" id="mobl2">
+                <img style="height: 30px; margin-top: 10px; margin-right: 15px;" src="https://spareshub.com/pub/media/wysiwyg/xhighquality.png.pagespeed.ic.QNKPkwEyQU.webp" alt="">
+                <p>HIGH QUALITY PARTS WITH WARRANTY </p>
+            </div>
+            <div style = "display: flex;" id="mobl3">
+                <img style="height: 30px; margin-top: 10px; margin-right: 15px;" src="https://spareshub.com/pub/media/wysiwyg/xsslcert.png.pagespeed.ic.-4v_2JWiOF.webp" alt="">
+                <p>SSL CERTIFIED TRANSACTION</p>
+            </div>
+            <div style = "display: flex;" id="mobl4">
+                <img style="height: 30px; margin-top: 10px; margin-right: 15px;" src="https://spareshub.com/pub/media/wysiwyg/xontimedel.png.pagespeed.ic.qKhFo47NUn.webp" alt="">
+                <p>ON - TIME DELIVERY</p>
+            </div>
+        </div>
+    </div>
+</body>
+<script src = "./cart.js"></script>
+<script>
+    var itemInCart = document.querySelector("#itemInCart");
+    var arr = JSON.parse(localStorage.getItem("cartList"));
+    console.log(arr);
+    itemInCart.innerText = arr.length;
+
+    function brands(){
+        var a = document.getElementById("brandBox");
+        a.style.display = "flex";
+    }
+
+    function brandsLeave(){
+        var a = document.getElementById("brandBox");
+        a.style.display = "none";
+    }
+
+    function categories(){
+        var a = document.getElementById("categoriesBox");
+        a.style.display = "flex";
+    }
+
+    function categoriesLeave(){
+        var a = document.getElementById("categoriesBox");
+        a.style.display = "none";
+    }
+
+    function manufactures(){
+        var a = document.getElementById("manufacturesBox");
+        a.style.display = "flex";
+        a.style.justifyContent = "spaceBetween";
+    }
+
+    function manufacturesLeave(){
+        var a = document.getElementById("manufacturesBox");
+        a.style.display = "none";
+    }
+
+    document.getElementById("careers").addEventListener("click" , function(){
+                
+        window.location.href = "./careers.html";
+    })
+    
+</script>
+
+
+</html>
+
+<!-- starting of slider -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./slider.css">
+</head>
+<body>
+    <div id = "imgContainer">
+         <div id = "sliderBox">
+           <div class = "imgClass">
+                 <img src="https://spareshub.com/pub/media/wysiwyg/xslider-2.jpg.pagespeed.ic.wD4yRqPU7d.webp" alt="">
+           </div>
+           <div class = "imgClass">
+            <img src="https://spareshub.com/pub/media/wysiwyg/xslider-4.jpg.pagespeed.ic.js2KXJ-PlY.webp" alt="">
+           </div>
+           <div class = "imgClass">
+            <img src="https://spareshub.com/pub/media/wysiwyg/xslider-7.jpg.pagespeed.ic.BAKcTOJCz8.webp" alt="">
+           </div>
+           <div class = "imgClass">
+            <img src="https://spareshub.com/pub/media/wysiwyg/xslider-1_1_.jpg.pagespeed.ic.CbiR6hPmV9.webp" alt="">
+         </div>
+         <div class = "imgClass">
+            <img src="https://spareshub.com/pub/media/wysiwyg/xslider-3.jpg.pagespeed.ic.cbnhFK_i7Q.webp" alt="">
+         </div>
+         </div>
+    </div>
+</body>
+  <script src = "./slider.js"></script>
+</html>
+
+
+
+
+<!-- starting of middle hover cirle part -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,6 +529,9 @@
 </body>
 </html> 
 
+
+
+<!-- starting of product List -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,8 +541,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>productList</title>
     <style>
+
+        .cartImg{
+            width: 15px;
+        }
         #productContainer {
-            width: auto;
+            width: 97%;
             height: auto;
             display: grid;
             grid-template-columns: repeat(5, 1fr);
@@ -57,7 +556,7 @@
         }
 
         .product {
-            width: 230px;
+            width: 100%;
             height: auto;
             margin: auto;
         }
@@ -65,7 +564,7 @@
         .productImg {
             border: 1px solid rgb(227, 224, 224);
             border-radius: 5px;
-            width: 230px;
+            width: 100%;
             padding: 3px;
             cursor: pointer;
         }
@@ -73,7 +572,6 @@
         .productName {
             text-align: center;
             font-size: 13.5px;
-            word-wrap: break-word;
             margin: 0 0 3px;
             color: #777;
             font-weight: bold;
@@ -116,6 +614,91 @@
             background-color: rgb(47, 129, 205);
             color: white;
         }
+
+        /* very small */
+        @media all and (min-width: 60px) and (max-width: 314px) {
+        #productContainer {
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            row-gap: 20px;
+            column-gap: 0px;
+            margin: 15px;
+        }
+
+        .product {
+            width: 90%;
+            height: auto;
+            margin: auto;
+        }
+
+        .productImg {
+            border: 1px solid rgb(227, 224, 224);
+            border-radius: 5px;
+            width: 100%;
+            padding: 3px;
+            cursor: pointer;
+        }
+      }
+
+        /* Small */
+      @media all and (min-width: 315px) and (max-width: 450px) {
+        #productContainer {
+            width: 90%;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 20px;
+            column-gap: 0px;
+            margin: 15px;
+        }
+
+        .product {
+            width: 90%;
+            height: auto;
+            margin: auto;
+        }
+
+        .productImg {
+            border: 1px solid rgb(227, 224, 224);
+            border-radius: 5px;
+            width: 100%;
+            padding: 3px;
+            cursor: pointer;
+        }
+      }
+
+      /* Medium  */
+      @media all and (min-width: 451px) and (max-width: 830px) {
+        #productContainer {
+            width: 95%;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 20px;
+            column-gap: 5px;
+            margin: 15px;
+        }
+
+        .product {
+            width: 100%;
+            height: auto;
+            margin: auto;
+        }
+
+
+        .productImg {
+            border: 1px solid rgb(227, 224, 224);
+            border-radius: 5px;
+            width: 100%;
+            padding: 3px;
+            cursor: pointer;
+        }
+
+      }
+
+
     </style>
 </head>
 
@@ -142,7 +725,7 @@
 
             <div class="cartButton">
                 <button id="cart" onclick='addToCart(1,"WIRING CONNECTOR UNIVERSAL  2 POLE FEMALE COUPLER",95)'>
-                    🛒 Add to Cart
+                    <svg class = "cartImg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M96 0C107.5 0 117.4 8.19 119.6 19.51L121.1 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H170.7L179.9 336H488C501.3 336 512 346.7 512 360C512 373.3 501.3 384 488 384H159.1C148.5 384 138.6 375.8 136.4 364.5L76.14 48H24C10.75 48 0 37.25 0 24C0 10.75 10.75 0 24 0H96zM128 464C128 437.5 149.5 416 176 416C202.5 416 224 437.5 224 464C224 490.5 202.5 512 176 512C149.5 512 128 490.5 128 464zM512 464C512 490.5 490.5 512 464 512C437.5 512 416 490.5 416 464C416 437.5 437.5 416 464 416C490.5 416 512 437.5 512 464z"/></svg>  Add to Cart
                 </button>
             </div>
 
@@ -165,7 +748,7 @@
 
             <div class="cartButton">
                 <button id="cart" onclick="addToCart(2,'WIRE ROLL 0.5 SQ. MM - WHITE COLOUR',168)">
-                    🛒 Add to Cart
+                    <svg class = "cartImg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M96 0C107.5 0 117.4 8.19 119.6 19.51L121.1 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H170.7L179.9 336H488C501.3 336 512 346.7 512 360C512 373.3 501.3 384 488 384H159.1C148.5 384 138.6 375.8 136.4 364.5L76.14 48H24C10.75 48 0 37.25 0 24C0 10.75 10.75 0 24 0H96zM128 464C128 437.5 149.5 416 176 416C202.5 416 224 437.5 224 464C224 490.5 202.5 512 176 512C149.5 512 128 490.5 128 464zM512 464C512 490.5 490.5 512 464 512C437.5 512 416 490.5 416 464C416 437.5 437.5 416 464 416C490.5 416 512 437.5 512 464z"/></svg>  Add to Cart
                 </button>
             </div>
 
@@ -188,7 +771,7 @@
 
             <div class="cartButton">
                 <button id="cart" onclick="addToCart(3,'WIRE ROLL 1.00 SQ. MM - RED COLOUR',301)">
-                    🛒 Add to Cart
+                    <svg class = "cartImg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M96 0C107.5 0 117.4 8.19 119.6 19.51L121.1 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H170.7L179.9 336H488C501.3 336 512 346.7 512 360C512 373.3 501.3 384 488 384H159.1C148.5 384 138.6 375.8 136.4 364.5L76.14 48H24C10.75 48 0 37.25 0 24C0 10.75 10.75 0 24 0H96zM128 464C128 437.5 149.5 416 176 416C202.5 416 224 437.5 224 464C224 490.5 202.5 512 176 512C149.5 512 128 490.5 128 464zM512 464C512 490.5 490.5 512 464 512C437.5 512 416 490.5 416 464C416 437.5 437.5 416 464 416C490.5 416 512 437.5 512 464z"/></svg>  Add to Cart
                 </button>
             </div>
 
@@ -211,7 +794,7 @@
 
             <div class="cartButton">
                 <button id="cart" onclick="addToCart(4,'WIRE ROLL 1.50 SQ. MM - VIOLET COLOUR',454)">
-                    🛒 Add to Cart
+                    <svg class = "cartImg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M96 0C107.5 0 117.4 8.19 119.6 19.51L121.1 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H170.7L179.9 336H488C501.3 336 512 346.7 512 360C512 373.3 501.3 384 488 384H159.1C148.5 384 138.6 375.8 136.4 364.5L76.14 48H24C10.75 48 0 37.25 0 24C0 10.75 10.75 0 24 0H96zM128 464C128 437.5 149.5 416 176 416C202.5 416 224 437.5 224 464C224 490.5 202.5 512 176 512C149.5 512 128 490.5 128 464zM512 464C512 490.5 490.5 512 464 512C437.5 512 416 490.5 416 464C416 437.5 437.5 416 464 416C490.5 416 512 437.5 512 464z"/></svg>  Add to Cart
                 </button>
             </div>
 
@@ -235,7 +818,7 @@
 
             <div class="cartButton">
                 <button id="cart" onclick="addToCart(5,'WIRE ROLL 6.00 SQ. MM - RED COLOUR',1812)">
-                    🛒 Add to Cart
+                    <svg class = "cartImg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M96 0C107.5 0 117.4 8.19 119.6 19.51L121.1 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H170.7L179.9 336H488C501.3 336 512 346.7 512 360C512 373.3 501.3 384 488 384H159.1C148.5 384 138.6 375.8 136.4 364.5L76.14 48H24C10.75 48 0 37.25 0 24C0 10.75 10.75 0 24 0H96zM128 464C128 437.5 149.5 416 176 416C202.5 416 224 437.5 224 464C224 490.5 202.5 512 176 512C149.5 512 128 490.5 128 464zM512 464C512 490.5 490.5 512 464 512C437.5 512 416 490.5 416 464C416 437.5 437.5 416 464 416C490.5 416 512 437.5 512 464z"/></svg>  Add to Cart
                 </button>
             </div>
 
@@ -259,7 +842,7 @@
             <div class="cartButton">
                 <button id="cart"
                     onclick="addToCart(6,'WIRING HARNESS (BODY) ECHER MCV MARK II MODEL 11.10',7473)">
-                    🛒 Add to Cart
+                    <svg class = "cartImg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M96 0C107.5 0 117.4 8.19 119.6 19.51L121.1 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H170.7L179.9 336H488C501.3 336 512 346.7 512 360C512 373.3 501.3 384 488 384H159.1C148.5 384 138.6 375.8 136.4 364.5L76.14 48H24C10.75 48 0 37.25 0 24C0 10.75 10.75 0 24 0H96zM128 464C128 437.5 149.5 416 176 416C202.5 416 224 437.5 224 464C224 490.5 202.5 512 176 512C149.5 512 128 490.5 128 464zM512 464C512 490.5 490.5 512 464 512C437.5 512 416 490.5 416 464C416 437.5 437.5 416 464 416C490.5 416 512 437.5 512 464z"/></svg>  Add to Cart
                 </button>
             </div>
 
@@ -283,7 +866,7 @@
 
             <div class="cartButton">
                 <button id="cart" onclick="addToCart(7,'FUSE BOX ASSEMBLY - BLADE TYPE FOR ZEN / ZEN ESTILO',417)">
-                    🛒 Add to Cart
+                    <svg class = "cartImg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M96 0C107.5 0 117.4 8.19 119.6 19.51L121.1 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H170.7L179.9 336H488C501.3 336 512 346.7 512 360C512 373.3 501.3 384 488 384H159.1C148.5 384 138.6 375.8 136.4 364.5L76.14 48H24C10.75 48 0 37.25 0 24C0 10.75 10.75 0 24 0H96zM128 464C128 437.5 149.5 416 176 416C202.5 416 224 437.5 224 464C224 490.5 202.5 512 176 512C149.5 512 128 490.5 128 464zM512 464C512 490.5 490.5 512 464 512C437.5 512 416 490.5 416 464C416 437.5 437.5 416 464 416C490.5 416 512 437.5 512 464z"/></svg>  Add to Cart
                 </button>
             </div>
 
@@ -307,7 +890,7 @@
 
             <div class="cartButton">
                 <button id="cart" onclick="addToCart(8,'WIRE ROLL 0.75 SQ. MM - BLUE COLOUR',239.00)">
-                    🛒 Add to Cart
+                    <svg class = "cartImg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M96 0C107.5 0 117.4 8.19 119.6 19.51L121.1 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H170.7L179.9 336H488C501.3 336 512 346.7 512 360C512 373.3 501.3 384 488 384H159.1C148.5 384 138.6 375.8 136.4 364.5L76.14 48H24C10.75 48 0 37.25 0 24C0 10.75 10.75 0 24 0H96zM128 464C128 437.5 149.5 416 176 416C202.5 416 224 437.5 224 464C224 490.5 202.5 512 176 512C149.5 512 128 490.5 128 464zM512 464C512 490.5 490.5 512 464 512C437.5 512 416 490.5 416 464C416 437.5 437.5 416 464 416C490.5 416 512 437.5 512 464z"/></svg>  Add to Cart
                 </button>
             </div>
 
@@ -331,11 +914,12 @@
 
             <div class="cartButton">
                 <button id="cart" onclick="addToCart(9,'WIRE ROLL 1.00 SQ. MM - BROWN COLOUR',301)">
-                    🛒 Add to Cart
+                    <svg class = "cartImg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M96 0C107.5 0 117.4 8.19 119.6 19.51L121.1 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H170.7L179.9 336H488C501.3 336 512 346.7 512 360C512 373.3 501.3 384 488 384H159.1C148.5 384 138.6 375.8 136.4 364.5L76.14 48H24C10.75 48 0 37.25 0 24C0 10.75 10.75 0 24 0H96zM128 464C128 437.5 149.5 416 176 416C202.5 416 224 437.5 224 464C224 490.5 202.5 512 176 512C149.5 512 128 490.5 128 464zM512 464C512 490.5 490.5 512 464 512C437.5 512 416 490.5 416 464C416 437.5 437.5 416 464 416C490.5 416 512 437.5 512 464z"/></svg>  Add to Cart
                 </button>
             </div>
-
         </div>
+
+
         <div class="product">
             <img src="https://spareshub.com/pub/media/catalog/product/placeholder/default/xno_image_3.png.pagespeed.ic.CL0sy0K3dL.webp"
                 alt="" class="productImg">
@@ -354,7 +938,7 @@
 
             <div class="cartButton">
                 <button id="cart" onclick="addToCart(10,'WIRE ROLL 2.50 SQ.MM- WHTE CLR',723)">
-                    🛒 Add to Cart
+                    <svg class = "cartImg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M96 0C107.5 0 117.4 8.19 119.6 19.51L121.1 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H170.7L179.9 336H488C501.3 336 512 346.7 512 360C512 373.3 501.3 384 488 384H159.1C148.5 384 138.6 375.8 136.4 364.5L76.14 48H24C10.75 48 0 37.25 0 24C0 10.75 10.75 0 24 0H96zM128 464C128 437.5 149.5 416 176 416C202.5 416 224 437.5 224 464C224 490.5 202.5 512 176 512C149.5 512 128 490.5 128 464zM512 464C512 490.5 490.5 512 464 512C437.5 512 416 490.5 416 464C416 437.5 437.5 416 464 416C490.5 416 512 437.5 512 464z"/></svg>  Add to Cart
                 </button>
             </div>
 
@@ -378,12 +962,18 @@
 
         localStorage.setItem('cartList',JSON.stringify(productArr));
 
-        // window.location.reload();
+        alert("Product Added to the Cart succesfully")
+
+         window.location.reload();
 
     }
 </script>
 
 </html>
+
+
+
+<!-- starting of footer Part-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -437,7 +1027,7 @@
         </div>
         <div class="upperFooter">
             <div class="innerFooter">
-                <a href="">About Us</a>
+                <a href="about.html">About Us</a>
                 <a href="">Contect Us</a>
                 <a href="">Call us - <i class='fab fa-whatsapp'>&#xf095;</i> 9307901458</a>
                 <a href="">Whatsapp us - <i class='fab'>&#xf232;</i> 9307901458</a>
@@ -445,17 +1035,17 @@
 
             </div>
             <div class="innerFooter">
-                <a href="">Franchise</a>
-                <a href="">Feedback</a>
-                <a href="">Disclaimer</a>
-                <a href="">Legal</a>
-                <a href="">Privacy Policy</a>
+                <a href="#">Franchise</a>
+                <a href="Feedback.html">Feedback</a>
+                <a href="disclaimer.html">Disclaimer</a>
+                <a href="legal.html">Legal</a>
+                <a href="privacy.html">Privacy Policy</a>
             </div>
             <div class="innerFooter">
-                <a href="">Shipping Policy</a>
-                <a href="">Refund Policy</a>
-                <a href="">Terms Conditions</a>
-                <a href="">Connect With Us</a>
+                <a href="sellers.html">Shipping Policy</a>
+                <a href="sellers.html">Refund Policy</a>
+                <a href="term&condition.html">Terms Conditions</a>
+                <a href="sellers.html">Connect With Us</a>
             </div>
             <div class="innerFooter">
                 <div id="innerfooter1">

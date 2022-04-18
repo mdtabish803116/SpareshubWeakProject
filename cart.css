@@ -1,11 +1,15 @@
 
 
-#cartBox {
+ #cartBox {
+    position : absolute;
+    background-color : white;
     width : 30%;
     border-top :5px solid #0088cc;
     border-radius : 5px;
     height : 300px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index : 2;
+    right : 10px;
 }
 
 
@@ -35,21 +39,20 @@
        overflow : auto;
        height : 160px;
    }
-#cartBox  #imgNamePriceDiv{
+ #cartBox  #imgNamePriceDiv{
     display : flex;
     margin : auto;
     margin-top : 30px;
 }
 
-#imgNamePriceDiv > div {
+ #imgNamePriceDiv > div {
      margin : 0px 20px;
 }
-
-#imgNamePriceDiv > div > div:nth-child(1){
+ #imgNamePriceDiv > div > div:nth-child(1){
       color : #0088cc;
 }
 
-#imgNamePriceDiv > div > div:nth-child(2){
+ #imgNamePriceDiv > div > div:nth-child(2){
     display : flex;
     justify-content: space-around;
     align-items : center;
@@ -58,19 +61,18 @@
     padding : 20px;
 }
 
-#imgNamePriceDiv > div > div >div:nth-child(2){
+ #imgNamePriceDiv > div > div >div:nth-child(2){
            font-size : 18px;
            cursor : pointer;
-}
- #cartBox > #scroll {
+        }
+  #cartBox > #scroll {
      height : 300px;
  }
 
-#cartBox  #imgNamePriceDiv img {
+ #cartBox  #imgNamePriceDiv img {
       width : 70px;
 }
-
-#cartBox > #viewCartDiv{
+ #cartBox > #viewCartDiv{
     width : 90%;
     margin : auto;
     text-align : center;
@@ -93,10 +95,60 @@
        }
 }
 
-@media all and (min-width: 50px) and (max-width : 451px){
-    #cartBox {
-        width : 90%;
+
+
+
+@media all and (min-width: 340px) and (max-width : 451px){
+
+    #mobCart > #cartBox {
+        position : absolute;
+        background-color : white;
+        width : 80%;
+        border-top :5px solid #0088cc;
+        border-radius : 5px;
+        height : 350px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        z-index : 2;
+        right : 5px;
     }
+   
+
+    #mobCart > #cartBox  #imgNamePriceDiv img {
+        width : 50px;
+  }
+
+  
 }
+
+@media all and (min-width: 50px) and (max-width : 340px){
+    #mobCart > #cartBox {
+        position : absolute;
+        background-color : white;
+        width : 80%;
+        border-top :5px solid #0088cc;
+        border-radius : 5px;
+        height : 350px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        z-index : 2;
+        right : 5px;
+    }
+   
+
+    #mobCart > #cartBox  #imgNamePriceDiv img {
+        width : 50px;
+  }
+    #mobCart > #cartBox > #titleDiv{
+        display : flex;
+         flex-direction : column;
+       
+      
+    }
+
+}
+
+
+
+
+
 
 

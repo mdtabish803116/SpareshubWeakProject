@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Careers</title>
+    <link rel="stylesheet" href="./cart.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         #mobile {
@@ -93,6 +94,7 @@
         #navCart {
             width: 30%;
             margin-right: 20px;
+            cursor : pointer;
         }
 
         #cartIcon {
@@ -162,6 +164,10 @@
         #underAfterMain button:hover {
             background-color: #2888CD;
             color: white;
+        }
+
+        #mobile #mobCart , #mobile #mobLogo , #main #logo{
+            cursor : pointer;
         }
 
         @media (max-width: 800px) {
@@ -894,17 +900,17 @@
 
             </div>
             <div class="innerFooter">
-                <a href="">Franchise</a>
-                <a href="">Feedback</a>
-                <a href="">Disclaimer</a>
-                <a href="">Legal</a>
-                <a href="">Privacy Policy</a>
+                <a href="#">Franchise</a>
+                <a href="Feedback.html">Feedback</a>
+                <a href="disclaimer.html">Disclaimer</a>
+                <a href="legal.html">Legal</a>
+                <a href="privacy.html">Privacy Policy</a>
             </div>
             <div class="innerFooter">
-                <a href="">Shipping Policy</a>
-                <a href="">Refund Policy</a>
-                <a href="">Terms Conditions</a>
-                <a href="">Connect With Us</a>
+                <a href="sellers.html">Shipping Policy</a>
+                <a href="sellers.html">Refund Policy</a>
+                <a href="term&condition.html">Terms Conditions</a>
+                <a href="sellers.html">Connect With Us</a>
             </div>
             <div class="innerFooter">
                 <div id="innerfooter1">
@@ -936,7 +942,7 @@
     </div>
 
 </body>
-
+<script src = "./cart.js"></script>
 <script>
     var itemInCart = document.querySelector("#itemInCart");
     var arr = JSON.parse(localStorage.getItem("cartList"));
@@ -973,6 +979,14 @@
         var a = document.getElementById("manufacturesBox");
         a.style.display = "none";
     }
+
+    document.getElementById("logo").addEventListener("click" , function(){
+                  window.location.href = "./index.html";
+    })
+
+    document.getElementById("mobLogo").addEventListener("click" , function(){
+                  window.location.href = "./index.html";
+    })
 </script>
 
 </html>

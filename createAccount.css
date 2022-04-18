@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: #777;
+font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+font-style: normal;
+/* font-weight: 400; */
+line-height: 1.4;
+/* font-size: 1.3rem; */
+}
+.container{
+    margin: 15px 10%;
+    /* border: 1px solid red; */
+}
+.container > h2{
+    font-size: 20px;
+    color: #0088CC;
+    font-family: sans-serif;
+    font-weight: 100;
+
+}
+.socalMeadia{
+    margin: 0 0 20px;
+    padding: 50px 0 0;
+}
+.socalMeadia > div{
+    display: flex;
+}
+
+.socalLink > p{
+    font-size: 14px;
+   font-family: sans-serif;
+   /* background-color: aqua; */
+   padding: 6px 12px 6px 12px;
+}
+#facebook{
+    background-color: #3B5998;
+    color: white;
+    display: flex;
+}
+#google{
+    background-color:#DD4B39;
+    color: white;
+    display: flex;
+}
+.socalLink > img{
+    /* size: 5px; */
+    height: 30px;
+}
+#form{
+    display: flex;
+}
+#btn{
+    display: inline-block;
+}
+#form{
+    display: block;
+border: 1px solid #ececec;
+border-radius: 8px;
+background: #fff;
+border-top: 4px solid #08c;
+padding: 35px 25px 0;
+box-shadow: 0 2px 3px rgb(0 0 0 / 8%);
+display: flex;
+
+}
+#form > div{
+    display: inline;
+}
+#form > div > h2{
+    color: #08c;
+text-transform: uppercase;
+margin: 0 0 20px;
+font-size: 16px;
+font-weight: 400;
+font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+#form > div{
+    width: 50%;
+padding: 0 25px;
+float: left;
+}
+input{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+#btn{
+    width: 25%;
+    background: #08c;
+border: 1px solid #08c;
+color: #fff;
+padding: 10px;
+margin-top: 100px;
+margin-bottom: 30px;
+
+}

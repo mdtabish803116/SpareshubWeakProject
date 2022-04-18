@@ -332,6 +332,7 @@
         width : 100%;
         background-color : #DCDCDC;
         height : 130px;
+        margin-top : 100px;
     }
 
     #paymentContainer > #appendShoppingItem{

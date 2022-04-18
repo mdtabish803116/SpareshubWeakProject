@@ -236,6 +236,9 @@
 
 
 @media all and (min-width: 451px) and (max-width : 950px){
+    #shoppingTitle{
+        margin-top : 60px;
+    }
     #shoppingContainer{
         width : 100%;
         flex-direction: column-reverse;
@@ -244,7 +247,7 @@
     }
 
     #shoppingContainer > #shoppingBox{
-        margin-top : 50px;
+        margin-top : 70px;
              width : 100%;
     }
 
@@ -287,6 +290,9 @@
 }
 
 @media all and (min-width: 51px) and (max-width : 450px){
+    #shoppingTitle{
+        margin-top : 200px;
+    }
     #shoppingContainer{
         width : 100%;
         flex-direction: column-reverse;
@@ -295,7 +301,7 @@
     }
 
     #shoppingContainer > #shoppingBox{
-        margin-top : 50px;
+        margin-top : 100px;
              width : 100%;
     }
 

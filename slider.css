@@ -1,0 +1,35 @@
+#imgContainer{
+    width : 100%;
+    margin-top : 30px;
+    overflow : hidden;
+}
+
+
+#imgContainer > #sliderBox {
+     width : 500%;
+     display : flex;
+ 
+}
+
+#imgContainer > #sliderBox > div {
+    width : 100%;
+}
+
+#imgContainer  img{
+    width : 100%;
+
+}
+
+@media all and (min-width : 451px) and (max-width : 650px){
+    #imgContainer{
+        margin-top : 60px;
+        
+    }
+}
+
+@media all and (min-width : 51px) and (max-width : 450px){
+    #imgContainer{
+        margin-top : 150px;
+        
+    }
+}
