@@ -48,4 +48,15 @@ document.getElementById("mobLogo").addEventListener("click" , function(){
         window.location.href = "./index.html";
 })
 
-    
+
+document.getElementById("contact").addeventListener("click" , function(){
+    window.location.href = "./contactUs.html"
+})
+
+document.getElementById("signin").addeventListener("click" , function(){
+    window.location.href = "./logIn.html"
+})
+
+document.getElementById("createAccount").addeventListener("click" , function(){
+    window.location.href = "./createAcc.html"
+})

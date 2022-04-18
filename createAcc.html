@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Account</title>
+    <link rel = "stylesheet" href = "./cart.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
@@ -863,25 +864,25 @@
         </div>
         <div class="upperFooter">
             <div class="innerFooter">
-                <a href="">About Us</a>
-                <a href="">Contect Us</a>
-                <a href="">Call us - <i class='fab fa-whatsapp'>&#xf095;</i> 9307901458</a>
-                <a href="">Whatsapp us - <i class='fab'>&#xf232;</i> 9307901458</a>
-                <a href="">Email us - ✉ care@spareshub.com</a>
+                <a href="./about.html">About Us</a>
+                <a href="./contactUs.html">Contact Us</a>
+                <a href="#">Call us - <i class='fab fa-whatsapp'>&#xf095;</i> 9307901458</a>
+                <a href="#">Whatsapp us - <i class='fab'>&#xf232;</i> 9307901458</a>
+                <a href="#">Email us - ✉ care@spareshub.com</a>
 
             </div>
             <div class="innerFooter">
-                <a href="">Franchise</a>
-                <a href="">Feedback</a>
-                <a href="">Disclaimer</a>
-                <a href="">Legal</a>
-                <a href="">Privacy Policy</a>
+                <a href="#">Franchise</a>
+                <a href="./Feedback.html">Feedback</a>
+                <a href="./disclaimer.html">Disclaimer</a>
+                <a href="./legal.html">Legal</a>
+                <a href="./privacy.html">Privacy Policy</a>
             </div>
             <div class="innerFooter">
-                <a href="">Shipping Policy</a>
-                <a href="">Refund Policy</a>
-                <a href="">Terms Conditions</a>
-                <a href="">Connect With Us</a>
+                <a href="./sellers.html">Shipping Policy</a>
+                <a href="./sellers.html">Refund Policy</a>
+                <a href="./term&condition.html">Terms Conditions</a>
+                <a href="./sellers.html">Connect With Us</a>
             </div>
             <div class="innerFooter">
                 <div id="innerfooter1">
@@ -913,6 +914,7 @@
     </div>
 
 </body>
+  <script src = "./cart.js"></script>
 <script>
     document.querySelector("#btn").addEventListener("click", func);
         let logInData = JSON.parse(localStorage.getItem("logInData")) || [];
@@ -984,5 +986,34 @@
         var a = document.getElementById("manufacturesBox");
         a.style.display = "none";
     }
+
+          document.getElementById("careers").addEventListener("click" , function(){
+                
+                window.location.href = "./careers.html";
+            })
+
+            document.getElementById("logo").addEventListener("click" , function(){
+        window.location.href = "./index.html";
+         })
+
+      document.getElementById("mobLogo").addEventListener("click" , function(){
+        window.location.href = "./index.html";
+         })
+
+
+         document.getElementById("contact").addEventListener("click" , function(){
+             window.location.href = "./contactUs.html"
+         })
+         
+         document.getElementById("signin").addEventListener("click" , function(){
+             window.location.href = "./logIn.html"
+         })
+         
+         document.getElementById("createAccount").addEventListener("click" , function(){
+             window.location.href = "./createAcc.html"
+         })
+
+
+
 </script>
 </html>
