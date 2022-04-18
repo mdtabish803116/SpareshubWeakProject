@@ -5,174 +5,127 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log-In</title>
+    <title>Contact Us</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
 
 
 body{
-    color: #777;
-font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
-font-style: normal;
-/* font-weight: 400; */
-line-height: 1.4;
-/* font-size: 1.3rem; */
-}
-.container{
-    margin: 15px 10%;
-    /* border: 1px solid red; */
-}
-.container > h2{
-    font-size: 20px;
-    color: #0088CC;
-    font-family: sans-serif;
-    font-weight: 100;
-    margin-bottom: 20px;
-
-}
-.socalMeadia{
-    margin: 0 0 20px;
-    padding: 50px 0 0;
-}
-.socalMeadia > div{
-    display: flex;
-}
-.socalMeadia *{
-    margin: 0;
-    padding: 0;
-}
-.socalLink > p{
-    font-size: 14px;
-   font-family: sans-serif;
-   /* background-color: aqua; */
-   padding: 6px 12px 6px 12px;
-}
-#facebook{
-    background-color: #3B5998;
-    color: white;
-    display: flex;
-}
-#google{
-    background-color:#DD4B39;
-    color: white;
-    display: flex;
-}
-.socalLink > img{
-    /* size: 5px; */
-    height: 30px;
-}
-#btn{
-    display: inline-block;
-}
-#form{
-    display: flex;
-
-}
-#outerBox{
-    border: 1px solid red;
-    width: 100%;
-    border: 1px solid #ececec;
-    border-radius: 8px;
-    background: #fff;
-    border-top: 4px solid #08c;
-    padding: 35px 25px 0;
-    box-shadow: 0 2px 3px rgb(0 0 0 / 8%);
-}
-#form > div{
-    display: inline;
-}
-#form > div > h2{
-    color: rgb(0, 0, 0);
-text-transform: uppercase;
-margin: 0 0 20px;
-font-size: 16px;
-font-weight: 400;
-font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
-}
-#form > div{
-    width: 50%;
-padding: 0 25px;
-float: left;
-}
-.container input{
-    display: block;
-    width: 50%;
-    padding: 10px;
-    margin: 10px 0;
-}
-#btn, #newAccountBtn{
-    width: auto;
-    background: #08c;
-border: 1px solid #08c;
-color: #fff;
-padding: 10px 15px;
-margin-top: 20px;
-margin-bottom: 30px;
-
-}
-
-h2 + p{
-    margin: 10px 0;
-}
-.red-star{
-    color: red;
-    font-size: 10px;
-}
-@media (max-width: 850px) { 
-    #form{
+        font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+        color: #777777;
+    }
+    .container {
+    margin: 0 12%;
+    }
+    .container *{
+        margin: 0;
+        padding: 0;
+    }
+    #details > div{
+        display: flex;
+    }
+    .box{
+        display: flex;
+    }
+    #contactDetails > div > div{
+        display: flex;
+        margin: 15px;
+        /* border: 1px solid red; */
+    }
+    #contactDetails > div > div > p{
+        display: inline-block;
+        border: 1px solid blue;
+    }
+    .logo > img{
+        width: 20px;
+        
+    }
+    .logo{
+        padding: 12px;
+        background-color: #0088CC;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+    #details{
+        width: 66%;
+    }
+    #contactDetails{
+        width: 33%;
+    }
+    #details > p , #contactDetails > p{
+        font-size: 20px;
+        color: #777777;
         display: block;
-        /* width: 60%; */
-    } 
-    #outerBox{
-        width: auto;
-        border: 1px solid #ececec;
-        border-radius: 8px;
-        background: #fff;
-        border-top: 4px solid #08c;
-        padding: 35px 0 0;
-        box-shadow: 0 2px 3px rgb(0 0 0 / 8%);
-        display: grid;
-        margin: 10px;
+        margin: 0 0 20px;
     }
-    #form > div{
-        width: 85%;
-    padding: 0 25px;
-    float: left;
+    #details > div > div > p{
+        font: 14px;
+        /* border: 1px solid red; */
+        margin: 0 0 8px;
     }
-    #btn , #newAccountBtn{
-        width: 105%;
-        background: #08c;
-    border: 1px solid #08c;
-    color: #fff;
-    padding: 10px;
-    margin-top: 0;
-    margin-bottom: 30px;
-        /* margin-left: 20px; */
+    #details > div{
+        width: 100%;
+        /* border: 1px solid red; */
     }
-    .container{
-        margin: 15px 10%;
-        /* padding: 0 15px 50px; */
+    #details > div > div{
+        width: 50%;
     }
     .container input{
+        width: 90%;
+        padding: 10px;
+        border-radius:  5px;
+        /* border: 1px solid black; */
+        margin-bottom: 10px;
+        border-color: #dbdbdb;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        background: #fff;
+        
+    }
+    #remark{
+        height: 70%;
+    }
+    #submitBtn{
+        width: 10%;
+        background-color: #0088CC;
+        color: aliceblue;
+
+    }
+    .red-star{
+      color: red;   
+      height: 10px;
+    }
+    @media (max-width: 850px) {
+        .box{
+            display: grid;
+        }
+        #details > div{
+            display: grid;
+        }
+        #details{
+            width: 100%;
+        }
+
+        #contactDetails{
+         width: 100%;
+        }
+        #details > div > div{
         width: 100%;
     }
-}
-@media (max-width: 450px) {
-    .socalMeadia > div{
-        display: grid;
-        grid-gap: 10px;
-        margin: 0 10%;
+       #submitBtn{
+        width: 90%;
+    }
+    #remark{
+        height: 200px;
     }
     .container{
-        margin: 15px 5px;
-        margin-top: 100px;
-        /* padding: 0 15px 50px; */
+        margin: 1%;
     }
-    #form{
-        padding: 0 15px 0 0;
+    #details{
+       margin: 7%;
     }
-}
+    }
 
          /* This is header and footer css */
 
@@ -790,39 +743,78 @@ h2 + p{
         <!-- This is box -->
 
         <div class="container">
-            <h2>Customer Login</h2>
-            <div id="outerBox">
-              <div id="form">
-                <div id="personal">
-                    <h2>Registered Customers</h2>
-                    <p>If you have an account, sign in with your email address.</p>
-                    <P>Email <span class="red-star">★</span> </P>
-                    <input id="email" type="text">
-                    <P>Password <span class="red-star">★</span> </P>
-                    <input id="password" type="password">
-                    <input id="btn" type="Submit" value="Sign In">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.211078508662!2d73.77912351472148!3d18.5645201873834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2becddd315555%3A0xf438dbe5a664267e!2sMont%20Vert%20Apex!5e0!3m2!1sen!2sin!4v1650008833955!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="box">
+                <div id="details">
+                    <p>Write <b>Us</b></p>
+                    <div>
+                    <div>
+                        <p>Name<span class="red-star">★</span></p>
+                        <input id="name" type="text">
+                        <p>Email<span class="red-star">★</span></p>
+                        <input id="email" type="text">
+                        <p>Phone Number</p>
+                        <input id="number" type="number">
+                    </div>
+                    <div>
+                        <p>Whats on your mind?<span class="red-star">★</span></p>
+                        <input id="remark" type="text">
+                    </div>
+                    </div>
+                    <input id="submitBtn" type="submit">
+        
                 </div>
-                <div id="signInfo">
-                    <h2>New Customer</h2>
-                    <P>Creating an account has many benefits: check out faster, keep more than one address, track orders and more.</P>
-                    <input id="newAccountBtn" type="Submit" value="Create an Account">
-                    <div class="socalMeadia">
-                        <div class="socalMeadiaBox">
-                            <div id="facebook" class="socalLink">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Facebook_logo_%28square%29.png/800px-Facebook_logo_%28square%29.png" alt="">
-                                <p>Sign in with Facebook</p>
+                <div id="contactDetails">
+                    <p>Contact <b>Details</b></p>
+                    <div>
+                        <div>
+                            <div class="logo">
+                                <img src="./phone.png" alt="">
                             </div>
-                            <div id="google" class="socalLink">
-                                <img src="https://image.similarpng.com/very-thumbnail/2020/12/Flat-design-Google-logo-design-Vector-PNG.png" alt="">
-                                <p>Sign in with Google</p>
+                            <div>
+                            <p>020-67123030</p>
+                            <p>91 7030917154</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="logo">
+                                <img src="./email.png" alt="">
+                            </div>
+                            <div>
+                            <p>contact@spareshub.com</p>
+                            <p>Mail Us</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="logo">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyY2yCTPJSng9xC1J6-ig804OW_UJXbT0jjg&usqp=CAU" alt="">
+                            </div>
+                            <div>
+                            <p>Spareshub_twitter</p>
+                            <p>Follow Infortis on Twitter</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="logo">
+                                <img src="./facebook.png" alt="">
+                            </div>
+                            <div>
+                            <p>Spareshub_facebook</p>
+                            <p>Join us on Facebook</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="logo">
+                                <img src="./facebook.png" alt="">
+                            </div>
+                            <div>
+                            <p>Linked in</p>
+                            <p>Linked in</p>
                             </div>
                         </div>
                     </div>
                 </div>
-               
             </div>
-        </div>
-            
         </div>
 
         <!-- This is footer -->

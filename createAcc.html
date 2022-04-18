@@ -5,176 +5,205 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log-In</title>
+    <title>Create Account</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
 
+        body {
+            color: #777;
+            font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-style: normal;
+            /* font-weight: 400; */
+            line-height: 1.4;
+            /* font-size: 1.3rem; */
+        }
 
-body{
-    color: #777;
-font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
-font-style: normal;
-/* font-weight: 400; */
-line-height: 1.4;
-/* font-size: 1.3rem; */
-}
-.container{
-    margin: 15px 10%;
-    /* border: 1px solid red; */
-}
-.container > h2{
-    font-size: 20px;
-    color: #0088CC;
-    font-family: sans-serif;
-    font-weight: 100;
-    margin-bottom: 20px;
+        .container {
+            margin: 15px 15%;
+            /* border: 1px solid red; */
+            margin-top: 30px;
+        }
 
-}
-.socalMeadia{
-    margin: 0 0 20px;
-    padding: 50px 0 0;
-}
-.socalMeadia > div{
-    display: flex;
-}
-.socalMeadia *{
-    margin: 0;
-    padding: 0;
-}
-.socalLink > p{
-    font-size: 14px;
-   font-family: sans-serif;
-   /* background-color: aqua; */
-   padding: 6px 12px 6px 12px;
-}
-#facebook{
-    background-color: #3B5998;
-    color: white;
-    display: flex;
-}
-#google{
-    background-color:#DD4B39;
-    color: white;
-    display: flex;
-}
-.socalLink > img{
-    /* size: 5px; */
-    height: 30px;
-}
-#btn{
-    display: inline-block;
-}
-#form{
-    display: flex;
+        .container>h2 {
+            font-size: 20px;
+            color: #0088CC;
+            font-family: sans-serif;
+            font-weight: 100;
 
-}
-#outerBox{
-    border: 1px solid red;
-    width: 100%;
-    border: 1px solid #ececec;
-    border-radius: 8px;
-    background: #fff;
-    border-top: 4px solid #08c;
-    padding: 35px 25px 0;
-    box-shadow: 0 2px 3px rgb(0 0 0 / 8%);
-}
-#form > div{
-    display: inline;
-}
-#form > div > h2{
-    color: rgb(0, 0, 0);
-text-transform: uppercase;
-margin: 0 0 20px;
-font-size: 16px;
-font-weight: 400;
-font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
-}
-#form > div{
-    width: 50%;
-padding: 0 25px;
-float: left;
-}
-.container input{
-    display: block;
-    width: 50%;
-    padding: 10px;
-    margin: 10px 0;
-}
-#btn, #newAccountBtn{
-    width: auto;
-    background: #08c;
-border: 1px solid #08c;
-color: #fff;
-padding: 10px 15px;
-margin-top: 20px;
-margin-bottom: 30px;
+        }
 
-}
+        .socalMeadia {
+            height: 20px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
 
-h2 + p{
-    margin: 10px 0;
-}
-.red-star{
-    color: red;
-    font-size: 10px;
-}
-@media (max-width: 850px) { 
-    #form{
-        display: block;
-        /* width: 60%; */
-    } 
-    #outerBox{
-        width: auto;
-        border: 1px solid #ececec;
-        border-radius: 8px;
-        background: #fff;
-        border-top: 4px solid #08c;
-        padding: 35px 0 0;
-        box-shadow: 0 2px 3px rgb(0 0 0 / 8%);
-        display: grid;
-        margin: 10px;
-    }
-    #form > div{
-        width: 85%;
-    padding: 0 25px;
-    float: left;
-    }
-    #btn , #newAccountBtn{
-        width: 105%;
-        background: #08c;
-    border: 1px solid #08c;
-    color: #fff;
-    padding: 10px;
-    margin-top: 0;
-    margin-bottom: 30px;
-        /* margin-left: 20px; */
-    }
-    .container{
-        margin: 15px 10%;
-        /* padding: 0 15px 50px; */
-    }
-    .container input{
-        width: 100%;
-    }
-}
-@media (max-width: 450px) {
-    .socalMeadia > div{
-        display: grid;
-        grid-gap: 10px;
-        margin: 0 10%;
-    }
-    .container{
-        margin: 15px 5px;
-        margin-top: 100px;
-        /* padding: 0 15px 50px; */
-    }
-    #form{
-        padding: 0 15px 0 0;
-    }
-}
+        .socalMeadia p{
+            margin: 0px;
+        }
 
-         /* This is header and footer css */
+        .socalMeadia>div {
+            display: flex;
+        }
+
+        .socalLink>p {
+            font-size: 14px;
+            font-family: sans-serif;
+            /* background-color: aqua; */
+            padding: 6px 12px 6px 12px;
+        }
+
+        #facebook {
+            background-color: #3B5998;
+            color: white;
+            display: flex;
+        }
+
+        #google {
+            background-color: #DD4B39;
+            color: white;
+            display: flex;
+        }
+
+        .socalLink>img {
+            /* size: 5px; */
+            height: 30px;
+        }
+
+        .red-star {
+            color: red;
+            font-size: 10px;
+        }
+
+        #btn {
+            display: inline-block;
+        }
+
+        #form {
+            display: flex;
+
+            /* height: 40%; */
+            /* background-color: #DD4B39; */
+            /* display: flex; */
+
+        }
+
+        #outerBox {
+            border: 1px solid red;
+            width: 100%;
+            border: 1px solid #ececec;
+            border-radius: 8px;
+            background: #fff;
+            border-top: 4px solid #08c;
+            padding: 35px 25px 0;
+            box-shadow: 0 2px 3px rgb(0 0 0 / 8%);
+        }
+
+        #form>div {
+            display: block;
+        }
+
+        #form>div>h2 {
+            color: #08c;
+            text-transform: uppercase;
+            margin: 0 0 20px;
+            font-size: 16px;
+            font-weight: 400;
+            font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        #form>div {
+            display: inline-block;
+            width: 45%;
+            padding: 0 25px;
+            /* float: left; */
+        }
+
+        .container input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        #btn {
+            width: 150px;
+            background: #08c;
+            border: 1px solid #08c;
+            color: #fff;
+            padding: 10px;
+            margin-top: 100px;
+            margin-bottom: 30px;
+
+        }
+
+        @media (max-width: 850px) {
+
+            #form {
+                display: block;
+                /* width: 60%; */
+            }
+
+            #outerBox {
+                width: auto;
+                border: 1px solid #ececec;
+                border-radius: 8px;
+                background: #fff;
+                border-top: 4px solid #08c;
+                padding: 35px 0 0;
+                box-shadow: 0 2px 3px rgb(0 0 0 / 8%);
+                display: grid;
+                margin: 10px;
+            }
+
+            #form>div {
+                width: 85%;
+                padding: 0 25px;
+                float: left;
+            }
+
+            #btn {
+                width: 90%;
+                background: #08c;
+                border: 1px solid #08c;
+                color: #fff;
+                padding: 10px;
+                margin-top: 0;
+                margin-bottom: 30px;
+                margin-left: 20px;
+            }
+
+            .container {
+                margin: 15px 10%;
+                /* padding: 0 15px 50px; */
+            }
+        }
+
+        @media (max-width: 450px) {
+            .socalMeadia>div {
+                display: grid;
+                grid-gap: 10px;
+                margin: 0 10%;
+            }
+
+            .container {
+                margin: 15px 5px;
+                margin-top: 100px;
+                /* padding: 0 15px 50px; */
+            }
+            #facebook{
+                margin-left: 25px;
+            }
+
+            #form {
+                padding: 0 15px 0 0;
+            }
+
+            #btn {
+                margin-left: 20px;
+            }
+        }
 
         #mobile{
             display:none;
@@ -786,46 +815,47 @@ h2 + p{
         </div>
     </div>
 
-
-        <!-- This is box -->
-
-        <div class="container">
-            <h2>Customer Login</h2>
-            <div id="outerBox">
-              <div id="form">
-                <div id="personal">
-                    <h2>Registered Customers</h2>
-                    <p>If you have an account, sign in with your email address.</p>
-                    <P>Email <span class="red-star">★</span> </P>
-                    <input id="email" type="text">
-                    <P>Password <span class="red-star">★</span> </P>
-                    <input id="password" type="password">
-                    <input id="btn" type="Submit" value="Sign In">
+    <div class="container">
+        <h2>Create New Customer Account</h2>
+        <div class="socalMeadia">
+            <div class="socalMeadiaBox">
+                <div id="facebook" class="socalLink">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Facebook_logo_%28square%29.png/800px-Facebook_logo_%28square%29.png"
+                        alt="">
+                    <p>Sign in with Facebook</p>
                 </div>
-                <div id="signInfo">
-                    <h2>New Customer</h2>
-                    <P>Creating an account has many benefits: check out faster, keep more than one address, track orders and more.</P>
-                    <input id="newAccountBtn" type="Submit" value="Create an Account">
-                    <div class="socalMeadia">
-                        <div class="socalMeadiaBox">
-                            <div id="facebook" class="socalLink">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Facebook_logo_%28square%29.png/800px-Facebook_logo_%28square%29.png" alt="">
-                                <p>Sign in with Facebook</p>
-                            </div>
-                            <div id="google" class="socalLink">
-                                <img src="https://image.similarpng.com/very-thumbnail/2020/12/Flat-design-Google-logo-design-Vector-PNG.png" alt="">
-                                <p>Sign in with Google</p>
-                            </div>
-                        </div>
-                    </div>
+                <div style="margin-left: 20px;" id="google" class="socalLink">
+                    <img src="https://image.similarpng.com/very-thumbnail/2020/12/Flat-design-Google-logo-design-Vector-PNG.png"
+                        alt="">
+                    <p>Sign in with Google</p>
                 </div>
-               
             </div>
         </div>
-            
+        <div id="outerBox">
+            <div id="form">
+                <div id="personal">
+                    <h2>PERSONAL INFORMATION</h2>
+                    <P>First name <span class="red-star">★</span> </P>
+
+                    <input id="firstName" type="text">
+                    <P>Last name <span class="red-star">★</span></P>
+                    <input id="lastName" type="text">
+                    <!-- <input id="btn" type="Submit" value="Create an Account"> -->
+                </div>
+                <div id="signInfo">
+                    <h2>SIGN-IN INFORMATION</h2>
+                    <P>Email<span class="red-star">★</span></P>
+                    <input id="email" type="text">
+                    <P>Password<span class="red-star">★</span></P>
+                    <input id="password" type="password">
+                    <P>Enter Password again<span class="red-star">★</span></P>
+                    <input id="againPassword" type="password">
+                </div>
+            </div>
+            <input id="btn" type="Submit" value="Create an Account">
         </div>
 
-        <!-- This is footer -->
+    </div>
 
     <div class="footer">
         <div class="upperFooter">
@@ -884,25 +914,40 @@ h2 + p{
 
 </body>
 <script>
-   document.querySelector("#btn").addEventListener("click",func);
+    document.querySelector("#btn").addEventListener("click", func);
+        let logInData = JSON.parse(localStorage.getItem("logInData")) || [];
 
-function func(){
-    var email = document.querySelector("#email").value;
-    var password = document.querySelector("#password").value;
-    //  localStorage.clear();
-    let logInData = JSON.parse(localStorage.getItem("logInData"));
-    let notFound = true;
-    logInData.forEach(profile => {
-        if(profile.email = email ){
-         window.alert("Hello"+" "+profile.firstName);
-         notFound = false;
-         window.location.href = "./index.html"
+        function func(){
+            // console.log(2)
+            var newData = {
+             firstName : document.querySelector("#firstName").value,
+             lastName : document.querySelector("#lastName").value,
+             email : document.querySelector("#email").value,
+             password : document.querySelector("#password").value,
+             passwordAgain : document.querySelector("#againPassword").value,
+            } 
+
+            // if(newData.firstName = ""){
+            //     window.alert("Enter First Name");
+            // }
+            // if(newData.lastName = ""){
+            //     window.alert("Enter Last Name");
+            // }else{
+                // console.log(newData.firstName)
+                
+                logInData.push(newData);
+
+            localStorage.setItem("logInData", JSON.stringify(logInData));
+            document.querySelector("#firstName").value = "";
+            document.querySelector("#lastName").value = "";
+             document.querySelector("#email").value = "";
+             document.querySelector("#password").value = "";
+            document.querySelector("#againPassword").value = "";
+            window.alert("Account created successfully")
+            window.location.href = "./logIn.html"
+            // }
+            
         }
-    });
-    if(notFound){
-        window.alert("Please create a account");
-    }
-}
 
         var itemInCart = document.querySelector("#itemInCart");
     var arr = JSON.parse(localStorage.getItem("cartList"));
