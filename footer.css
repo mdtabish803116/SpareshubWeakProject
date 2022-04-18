@@ -471,7 +471,7 @@ img {
     display: flex;
 }
 
-@media all and (min-width: 60px) and (max-width: 600px){
+@media all and (min-width: 60px) and (max-width: 800px){
     .privacy-box-container {
         display: block;
     }
