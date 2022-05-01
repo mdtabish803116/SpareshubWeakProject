@@ -1,9 +1,8 @@
-
 var shippingDiv = document.querySelector("#shippingDiv > div:last-child");
        shippingDiv.style.color = "#0088cc";
        shippingDiv.style.cursor = "pointer";
      shippingDiv.addEventListener("click" , function(){
-              window.location.href = "./checkOut.html";
+              window.location.href = "./checkOutReturns.html";
      })
 
      document.getElementById("paymentForm").addEventListener("submit" , function(event){
@@ -31,46 +30,24 @@ var shippingDiv = document.querySelector("#shippingDiv > div:last-child");
      //  }
 
      var cartListArr = JSON.parse(localStorage.getItem("cartList"));
-          
-     var total = 0;
-       cartListArr.forEach(function(cartItem){
-             total = total + parseInt(cartItem.price);
-       })
 
-       localStorage.setItem("totalPayment" , total);
+     var totalPrice = localStorage.getItem("totalPrice");
+          
+    //  var total = 0;
+    //    cartListArr.forEach(function(cartItem){
+    //          total = total + parseInt(cartItem.price);
+    //    })
+
+     //  localStorage.setItem("totalPayment" , total);
   var totalPayment = JSON.parse(localStorage.getItem("totalPayment"));
 
          var orderTotalText = document.createElement("div");
             orderTotalText.textContent = "Order Total";
      var appendOrderTotal = document.createElement("div");
-        appendOrderTotal.textContent = ` ₹ ${totalPayment}.00`;
-        appendOrderTotal.setAttribute("id" , "appendOrderTotal")
+        appendOrderTotal.textContent = ` ₹ ${totalPrice}.00`
      document.getElementById("orderTotalDiv").append(orderTotalText ,appendOrderTotal);
 
-//     discont coupon functionallity
 
-var flagCpn = true;
-document.getElementById("applyBtn").addEventListener("click", function(){
-    var inputCpnVal = document.querySelector("#inputCpn").value;
-    var appendOrderTotal = document.getElementById("appendOrderTotal")
-       if(flagCpn){  
-    if(inputCpnVal == "masai30"){
-        total = parseInt(total - total*(0.3));
-
-       // console.log(total);
-        alert("Coupon applied succesfully");
-
-        flagCpn = false;
-    }else {
-        alert("Coupon is not Valid !")
-    }
-
-    appendOrderTotal.textContent = `₹ ${total}.00`;
-
-  }else{
-      alert("You have already applied the coupon !");
-  }
-})
 
 //   itemsincart functionality
 
@@ -164,12 +141,9 @@ document.getElementById("applyBtn").addEventListener("click", function(){
 
      //   going to editing in shipping address
        document.getElementById("editShipping").addEventListener("click" , function(){
-              console.log("hii");
-              window.location.href = "./checkOut.html";
+             // console.log("hii");
+              window.location.href = "./checkOutReturns.html";
        })   
 
 
 
-
-
-     

@@ -35,4 +35,9 @@
         a.style.display = "none";
     }
 
+    document.getElementById("careers").addEventListener("click" , function(){
+                
+        window.location.href = "./careers.html";
+    })
+
     

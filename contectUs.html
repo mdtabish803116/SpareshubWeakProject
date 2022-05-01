@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="cart.css">
+    <style>
+    /* *{
+        margin: 0;
+        padding: 0;
+    } */
+    .logo, #bar p{
+        height: 20px;
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+        color: #777777;
+    }
+    .container {
+    margin: 0 12%;
+    }
+    #details > div{
+        display: flex;
+    }
+    .box{
+        display: flex;
+    }
+    #contactDetails > div > div{
+        display: flex;
+        margin: 15px;
+        /* border: 1px solid red; */
+    }
+    #contactDetails > div > div > p{
+        display: inline-block;
+        border: 1px solid blue;
+    }
+    .logo > img{
+        width: 20px;
+        
+    }
+    .logo{
+        padding: 12px;
+        background-color: #0088CC;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+    #details{
+        width: 66%;
+    }
+    #contactDetails{
+        width: 33%;
+    }
+    #details > p , #contactDetails > p{
+        font-size: 20px;
+        color: #777777;
+        display: block;
+        margin: 0 0 20px;
+    }
+    #details > div > div > p{
+        font: 14px;
+        /* border: 1px solid red; */
+        margin: 0 0 8px;
+    }
+    #details > div{
+        width: 100%;
+        /* border: 1px solid red; */
+    }
+    #details > div > div{
+        width: 50%;
+    }
+    input{
+        text-align: left;
+        width: 90%;
+        padding: 10px;
+        border-radius:  5px;
+        /* border: 1px solid black; */
+        margin-bottom: 10px;
+        border-color: #dbdbdb;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        background: #fff;
+        
+    }
+    #remark{
+        height: 70%;
+    }
+    #submitBtn{
+        width: 10%;
+        background-color: #0088CC;
+        color: aliceblue;
+
+    }
+    .red-star{
+      color: red;   
+      height: 10px;
+    }
+    @media (max-width: 850px) {
+        .box{
+            display: grid;
+        }
+        #details > div{
+            display: grid;
+        }
+        #details{
+            width: 100%;
+        }
+
+        #contactDetails{
+         width: 100%;
+        }
+        #details > div > div{
+        width: 100%;
+    }
+       #submitBtn{
+        width: 90%;
+    }
+    #remark{
+        height: 200px;
+    }
+    .container{
+        margin: 1%;
+    }
+    #details{
+       margin: 7%;
+    }
+    }
+    </style>
+</head>
+
+
+<body>
+
+    <div id="deskNav">
+        <div id="upline"
+            style="height: 3px; background-color: #2888CD; width: 100%;margin: auto; margin-top: -7.7px; margin-left: -7px;">
+        </div>
+        <div id="welcome">
+            <div id="underWelcome">
+                <p style="color: #777; height: 0px; cursor: text; text-decoration: none;">WELCOME AT SPARESHUB.COM!</p>
+                <p style="color: #777;">|</p>
+                <p id="contact"><a style="text-decoration: none;" href="contectUs.html">CONTACT US</a> </p>
+                <p style="color: #777;">|</p>
+                <p id="signin"><a style="text-decoration: none;" href="logIn.html">SIGN IN</a></p>
+                <p style="color: #777;">|</p>
+                <p id="createAccount"><a style="text-decoration: none;" href="createAcc.html">CREATE ACCOUNT</a></p>
+            </div>
+        </div>
+
+        <div id="main">
+            <div id="logowithsearch">
+                <div id="logo">
+                    <img src="https://spareshub.com/pub/media/logo/stores/1/200x50xlogo.png.pagespeed.ic.3_mBb67eog.webp"
+                        alt="">
+                </div>
+                <div id="search" style="display: flex; justify-content: space-between;">
+                    <input id=searchbox type="text" placeholder="Search entire store here..."
+                        style="border: none; background-color: transparent; margin-left: 15px; margin-top: 0px; color: #656464;">
+                    <img src="https://i.ibb.co/4MPMFh4/search.png" alt="" id="searchimg"
+                        style="margin: 5px 5px 5px; border-left: 1px solid #9999; padding-left: 3px; cursor: pointer;">
+                </div>
+            </div>
+            <div id="contactwithcart">
+                <div id="navContact">
+                    <p id="callus">Call us - <span style="color: #2888CD;">919307901479</span></p>
+                    <p id="whatsappus">Whatsapp us -<span style="color: #2888CD;"> 9307901458</span> </p>
+                    <p id="emailus">Email us - <span style="color: #2888CD;">care@spareshub.com</span></p>
+                </div>
+                <div id="navCart">
+                    <img src="https://i.ibb.co/7QqbSmG/bag.png" alt="" id="cartIcon">
+                    <p id='itemInCart'>0</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="afterMain">
+            <div id="underAfterMain">
+                <button id="brands" onpointerenter="brands()" onpointerleave="brandsLeave()">BRANDS
+                    <i class = "fas fa-caret-down"></i>
+                </button>
+                <button id="categories" onpointerenter="categories()" onpointerleave="categoriesLeave()">CATEGORIES
+                    <i class = "fas fa-caret-down"></i>
+                </button>
+                <button id="manufactures" onpointerenter="manufactures()" onpointerleave="manufacturesLeave()">MANUFACTURES
+                    <i class = "fas fa-caret-down"></i>
+                </button>
+                <button id="careers">CAREERS</button>
+            </div>
+        </div>
+
+        <div id="brandBox" style="position: absolute;">
+            <div id="brandImg" style="width: 30%; margin: 10px; color: white; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                <img src="https://spareshub.com/pub/media/wysiwyg/xbrandnav.png.pagespeed.ic.66n8dmBy5h.webp" alt="">
+                <p>Car Brands
+                    Get replacement parts for any car brand and model at SparesHub.com...</p>
+            </div>
+            <div id="brandText" style="width: 70%; margin: 10px; color: white; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; display: grid; grid-template-columns: repeat(4,1fr); justify-content: space-around;">
+                <P>AUDI</P>
+                <p>BMW</p>
+                <P>CHEVROLET</P>
+                <p>DAEWOO</p>
+                <P>CHEVROLET</P>
+                <p>DAEWOO</p>
+                <P>DASTUN</P>
+                <p>FIAT</p>
+                <P>FORCE MOTORS</P>
+                <p>FORD</p>
+                <P>LAND ROVER</P>
+                <p>HONDA</p>
+                <P>ICML</P>
+                <p>JAGUAR</p>
+                <P>HINDUSTAN MOTORS</P>
+                <p>JEEP</p>
+            </div>
+        </div>
+
+        <div id="categoriesBox" style="position: absolute;">
+            <div id="brandImg" style="width: 30%; margin: 10px; color: white; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                <img src="https://spareshub.com/pub/media/wysiwyg/xcategory_megamenu.png.pagespeed.ic.1v0mmxg-32.webp" alt="">
+                <p>Car Brands
+                    Get replacement parts for any car brand and model at SparesHub.com...</p>
+            </div>
+            <div id="brandText" style="width: 70%; margin: 10px; color: white; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; display: grid; grid-template-columns: repeat(4,1fr); justify-content: space-around;">
+                <P>BUSHES</P>
+                <p>BELTS</p>
+                <P>BODY PARTS</P>
+                <p>BRACKING SYSTEM</p>
+                <P>CLUTCH SYSTEM</P>
+                <p>ELECTRICALS</p>
+                <P>ENGINE PARTS</P>
+                <p>FILTERS</p>
+                <P>STEERING SYSTEM</P>
+                <p>HEETING & COOLING</p>
+                <P>LIGHTING SYSTEM</P>
+                <p>LUBES AND FLUIDS</p>
+                <P>SENSORS</P>
+                <p>SUPENSION SYSTEM</p>
+                <P>TRANSMISSION</P>
+                <p>UNKNOWN</p>
+            </div>
+        </div>
+
+        <div id="manufacturesBox" style="position: absolute;">
+            <div id="brandText" style="width: 100%; margin: 10px; color: white; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; display: grid; grid-template-columns: repeat(7,1fr); justify-content: space-around;">
+                <P>BRAVO</P>
+                <p>BANCO</p>
+                <P>FORD</P>
+                <p>BANDO</p>
+                <P>BOSCH</P>
+                <p>BREMBO</p>
+                <P>COFAP</P>
+                <p>GSP</p>
+                <P>KYB</P>
+                <p>NACHI</p>
+                <P>NISSAN</P>
+                <p>ZIP</p>
+                <P>LUK</P>
+                <p>MEYLE</p>
+                <P>NEOLITE</P>
+                <p>NWK</p>
+                <p>NACHI</p>
+                <P>NISSAN</P>
+                <p>ZIP</p>
+                <P>LUK</P>
+                <p>MEYLE</p>
+                <P>NEOLITE</P>
+                <p>NWK</p>
+                <P>FORD</P>
+                <p>BANDO</p>
+                <P>BOSCH</P>
+                <p>BREMBO</p>
+                <P>COFAP</P>
+                <p>GSP</p>
+                <P>NEOLITE</P>
+                <p>NWK</p>
+                <P>FORD</P>
+                <p>BANDO</p>
+                <P>LUK</P>
+                <p>MEYLE</p>
+            </div>
+        </div>
+
+        <div id="lowerNev" style="display: flex; width: 80%; margin: auto; margin-top: 15px; font-size: 14px; margin-bottom: 30px; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #777; height: 30px;">
+            <div id="l1" style="display: flex; width: 18.5%; justify-content: space-between;">
+                <img src="data:image/webp;base64,UklGRrQBAABXRUJQVlA4TKgBAAAvIMAHEJ9jkG2k+iM87u0hZmSsDSZtG1vSblPktm2DnGbLfANzAwBEIQQQvLmyJACgEEKAYBFcIIBABAAEBwBAATYbFsXjIC4rggUQh4bGj5UYBQiECBaLgMW3jLCr3m0AsmzbNu1qxNmxru+N84zYtm0711r1/zrYqwgR/Z+ABbH+he3m67T/WZm2u8G/UYqv+qgp/FOZFuNFY4Va9dyS8oxXQLJJ1bz4+YnqtEXnT+smq0OxXrM6uwgExuRbIBAIjMm3QOBl0+4Mfkoc4KfE4cFrSupdTkrJZFYyyWQymZVMMlne8OiawmVgyXaxx8PpUJ2WzdROpHp9f/9YLvdVb2X47DQRkLsz1Ts5PzvbBQjIMKrDYnB3icSAoXowg0AipLB3AvXyHyakFq52FEbGwcgwTIuBm31/zeU/uOqE12aqCFbCyHqv0l1KJo0x5rsk03U697+fxb3/rVUHHo6Hr5+Gt8SA2hL7N0z7mJJ6uN7zteJWB0x3QNcE8KPPz/WBYzmLvdd8qXv/pv1zh5a8aH5Aw2Pq7es9FaZqdFrzL9C2nSseRVEH" alt="">
+                <p style="margin-top: 6px;">LARGEST COLLECTION </p>
+            </div>
+            <div id="l2" style="display: flex; width: 28%; justify-content: space-between; margin-left: 30px;">
+                <img src="data:image/webp;base64,UklGRgYCAABXRUJQVlA4TPkBAAAvFwAIEPejoG0bxvwhjG33MMzIWDNu20ZybCXN/VqySRuyF/sGvhoAAARpL0EMDASwwA4TIAggAie4eAgDteCxIPwQQIAwMSDAABBv5AghgIWBNWgU9f4T3LgABkBjHcbyQEC0bdt0s5Patm3btvFQI7adt3++L/dVHxDR/wmAYMP7ewOM1uys9S/EotHYQv/aTo3IOUlaGhosJHkuUBqVWqdXi4Hi1elWKVqao/iIwzCPHt9tF/eaMcyj4i/VJxG+mPrszLr2l2gfMr0wclIN7FKZMNdqvo0yIH/Vp62bJxTuApusR8faXAV0Kx+0AdRzExjmWJ7DjtyVXod5jMPAPBcnuCyAFY4vch51EXvZabpYpChzWmaP1D0n2iBbIWyT0JZ4dgZrINvF7DJqgs725FP+RbxQpDB+kf+UbMc252c4IzLDmXluA/2cLPRZinIVWXyFk+wHVtmCWd4V6BXccRYtXAX2eNGMA74NmgDT4BsP0HTBPaBRyvIWSyH6VdXP0BJumZUaAaD2hp0o37p/fb3fKkcnb2qhX5W6LGrtMQGm3taiy1QVcl9rJJWqKoWkdg3BxrBt/SDr8WQP1m3hRhF8yEB/INAPyB8whLIyfJPuf1ByeFjyLSNu0j1i7PGKvqkpH68ejVA7KwPKzjQakD67odv1KekBAA==" alt="">
+                <p style="margin-top: 6px;">HIGH QUALITY PARTS WITH WARRANTY </p>
+            </div>
+            <div id="l3" style="display: flex; width: 23%; justify-content: space-between; margin-left: 30px;">
+                <img src="data:image/webp;base64,UklGRnwCAABXRUJQVlA4THACAAAvHQAIEE/EoG0bQeYP4dn+0uMwI2PNsG3byLFKcu9R5LZtg5xGB/0NnG8AQAAAhAAE19387vUSAhAlwLBzJcsFIcCWhh9s4ceNlTEVBrA/xqonzJsDF0GAMAAxDECUPNOrGiMABEmSTVt1v23btm3btm3rGb3up7+EiP5PAL4jr37nG3JzG+Z/ryIJPONeft5nBBLUbdFj9cTx7e3xRPWjLF1B/oR1PEp7UfiM2pMeWkM9oqr6d36ljzYgxiMGaPuQfrZ6q6IuJOm+JxwY0dPKypNGgPCee0m6+NZyXzZA4r587icCZPct69vlBIzUplWbzM0lnZ0lzWbZVptSDcDh0h8wLcm9nYbXtG23pGngTxJwruvhTPzMHL7WOeCQRRFwq3y8FhR4QL5uIUKWZ2XBpQq9TUx4K9QlZOn5VHVwrBpvj4/eanUMdTqd1TgsagBC5+V1PhQGtAjjmm3RCfRpDaDhR/ppAFhTH5yoJcFtCSdP7x7cSXd4viuPMIs7gRs1YnyoCEhzjY250oAifRjU6wYGtQtTWgVaSqG0BVjVFOxrEOLszmRSnPYM/MywO1NIcdjjgC3NwKr2/TnQKixoCyDHbUsl3qR2X+0yxZNqc+d4sKFN6JC1wFuBVR1wpA28JprUAEv6zvXI/dYSNMmU6I1efcUTfKjfcij/1WEw6b/qxadxpuswQnblHBpyajeEsBudGb6IfdWmgTHpltyTBsG7eo3F31yT1oOh8u2tEoLXZMrF/zKrtkIgOBhCtmQtI9BKky5jAaIvZKok8MJPvRRD0as+C/nPpBs5x0cduknif0PmJGkuhH+veH6uwH8=" alt="">
+                <p style="margin-top: 6px;">SSL CERTIFIED TRANSACTION </p>
+            </div>
+            <div id="l4" style="display: flex; width: 17%; justify-content: space-between; margin-left: 30px;">
+                <img src="data:image/webp;base64,UklGRiYCAABXRUJQVlA4TBoCAAAvIoAIECdjkG2k+iM87v0gZmSsGbZtGzlYyXnauyM44NwACAAAECIIBAABKIBCAxSA7whAQYAGCEQDiMa/X0JImxgIUAjEYDEAYPCv0BAaIhDBIigAMAABCIQQAAAItm2bkU61bdu2bTvlipN+859EJ+9n9Qgi+s/AbdtGVm/vs5NHoNG0cPVWiySqvV0tNJGJ3mtHROyCVbBFxLnuNa+1nIfi3i51MbwEXUu3roTnLYZpqCj2fivA6SsArfu2FIfUac6Xu6FZVA2OddyJP6dNYbzJWl7X5SNsxmF6DPnxCklm2hfPUFiJ/aHk3YqySYrPU3Q2pZi42bnckeawaBB3cg70hnaHYlC/jKhrdQ0ddtgL17JPcYMUX+eqLp7Zl2uaHLeVyU5S7JVymvpGaXWdpgW5RaXndwIDt7JwJcvovF+ZtCxXb9KFznqlDp0ueavZmF4lnsaAXYsKj5b1M4XC0w0pur8t66OtEIm1vLOz3a3puEqK5q2dnfV6S6ICBhaDMwwUIuPuxfAc827TZcvhEZgvM/ixGh9CBj90V1ejXSCDq02O18p4D8BGtIGBnnFaPaeJazng++hv+jVOHH1zINfJnDbmYDhaNZ+Wa0zmlHN5SOS2nyzcy7m5ZiBDzZgrD8yVp9fvSlmv35OXZP3qXeBhYF5X/2THg/hzxl5yYOglB7YUhzJ0JO92OdWRlm+9REf6x772H90R" alt="">
+                <p style="margin-top: 6px;">ON - TIME DELIVERY</p>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <div class="container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.211078508662!2d73.77912351472148!3d18.5645201873834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2becddd315555%3A0xf438dbe5a664267e!2sMont%20Vert%20Apex!5e0!3m2!1sen!2sin!4v1650008833955!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="box">
+        <div id="details">
+            <p>Write <b>Us</b></p>
+            <div>
+            <div>
+                <p>Name<span class="red-star">★</span></p>
+                <input id="name" type="text">
+                <p>Email<span class="red-star">★</span></p>
+                <input id="email" type="text">
+                <p>Phone Number</p>
+                <input id="number" type="number">
+            </div>
+            <div>
+                <p>Whats on your mind?<span class="red-star">★</span></p>
+                <input id="remark" type="text">
+            </div>
+            </div>
+            <input id="submitBtn" type="submit">
+
+        </div>
+        <div id="contactDetails">
+            <p>Contact <b>Details</b></p>
+            <div>
+                <div id="bar">
+                    <div class="logo">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3z3c9GHWBzOTZLK4k44XNwHMQWW_hypigDA&usqp=CAU" alt="">
+                    </div>
+                    <div>
+                    <p>020-67123030</p>
+                    <p>91 7030917154</p>
+                    </div>
+                </div>
+                <div id="bar">
+                    <div class="logo">
+                        <img src="data:image/png;base64,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" alt="">
+                    </div>
+                    <div>
+                    <p>contact@spareshub.com</p>
+                    <p>Mail Us</p>
+                    </div>
+                </div>
+                <div id="bar">
+                    <div class="logo">
+                        <img src="data:image/png;base64,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" alt="">
+                    </div>
+                    <div>
+                    <p>Spareshub_twitter</p>
+                    <p>Follow Infortis on Twitter</p>
+                    </div>
+                </div>
+                <div id="bar">
+                    <div class="logo">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAb1BMVEU7V53///82U5soSpbx8/izvdlofLA5VZw/XKHd4eyrt9QzUZpec6v2+PuFlb/o6/S8xdxzhbdEYKPX3eugrM19j71ZcKv09vrl6fLHz+JVbaovTpmWpMlPaah1h7hid67O1eaRn8aWpMoPO5AjRZW/EryeAAAEb0lEQVR4nO3dC4+iSBSG4aJED1rQIDcvqNiz+/9/48DYvbOXBEvZ4pyqfG8mnXQybXiCgBRQquhRXjRtqUKpbJsi/5KpXz/jOlWaiHvB/reItErr+Lew2msdDu8Rab2vvoVFaULzjZEpi4ewKjX3wjhKl9UojG+Ge0mcZW7xIKyD2wR/R7qOVJ6G+h4d02muChXuKhxW4uBrwt0Kx0yj2pBX4bASW1UGLgznoyhCCCGEEEIIIYQQchaNV8lIf0fDb+OP8eKZ/8Nng8EQJeW57Tdf9X2ftufz9Vom43/Qxhh/r0eQ0UnbXHane3XM4/hwiMfy/HjcVtX9fiqKdV1/ftw258RDI+muS/a7e37IoqmybHAfPbxuplX7cYonbX9nfvgmNGqz3k6vO5+FZFb9X3dQhCgk1a9f4vkm1El9fBXok5C6c/Gyzych6c/XNkDfhJRcXtiBeijUqj68BfRFSOqdTdAjISW7d4F+CEm/uQ16I+w+3wd6IdTntw4T/ggpeXsv44eQqJ4D9ECoN69/FvVLuJr1HvVAqDfzgOKFMz7MeCI0e+sBGT+FM48UHgh1P29HKl/Yfc4FChdSVwUu1NcZH7m9EJqP2UDhQnUKXEjXbeBC/eLhPntcYvtnueSnRewHL7L8frn1pdLdfxN8+ZCU7UWK7aVPxsu9ROPzS//6J7nEbkeT1WdPL2bT2ep4H28kvxEno95mBCr+6LgX9O303mYgf8e9mDMyjcWu1OsnlK1OLC6Cj3ZP6y4WwrPHq1CtLAZKK2/3o2MriwtO6xX3Us5pZfGRpg5dmHl8MFR2QsknDs+zEB72oQvjjc8HCwgh9CAIIZQfhBDKD0II5QchhPKDEEL5QeiHkCayEpqpVyABT3QnE3U2wslXGOP1UXvfTmRxr8lx6u/HCt4BVZ3OeZLCqhPvsP8Cwl3wwjp0IffFKffCeM97wHQvzFPeA6J7YXUNXXhingXZvZB7snX3wh3z51LnwuwH87mHc+GB+04G58Lh7Cpw4ZH7KwGcCyvurwRwLjxxn+I7F66573B3LvzBfcuUcyH7XG3OhT33YKNrYcZ8ZuFemLN/lZpr4Zb9DmLXwlPwwl3wwgv7XeCOhdxDie6F3EOJ7oVH/u/8cyzkHkp0L+QeSnQv5B5KVOOUAvVuoufzDWTF1N837MCBuJroj+fPrsXpnxMvwH3q9LQw7sWYCkII5QchhPKDEEL5QQih/CCEUH4QQig/CCGUH4QQyg9CCOUHIYTygxBC+UEIofwghFB+EEIoPwghlB+EEMoPQgjlByGE8oMQQvlBCKH8IIRQfhBCKD8IIZQfhBC+ENPkC4sJSSU8xKWEVCqmSUAXE7aKaarapYSmUUzzvCwkpMGX88y3tJBQp7mKapaJTpcRkq4jFcUs84AuIzS3eBBGVcnwPl1EqMsqGoVRUS4/UeYCQjJlET2EUbXXS2+MzoWk9b6KvoVRXKdKL/oFUW6FRFql9WM2NfX1cnnRtEvO8eZWWLZN8T1b3E8GyF19lc9R6AAAAABJRU5ErkJggg==" alt="">
+                    </div>
+                    <div>
+                    <p>Spareshub_facebook</p>
+                    <p>Join us on Facebook</p>
+                    </div>
+                </div>
+                <div id="bar">
+                    <div class="logo">
+                        <img src="data:image/jpeg;base64,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" alt="">
+                    </div>
+                    <div>
+                    <p>Linked in</p>
+                    <p>Linked in</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="upperFooter">
+        <div class="spareshub"> <span>Spareshub</span></div>
+    </div>
+    <div class="upperFooter">
+        <div class="innerFooter">
+            <a href="about.html">About Us</a>
+            <a href="contectUs.html">Contect Us</a>
+            <a href="">Call us - <i class='fab fa-whatsapp'>&#xf095;</i> 9307901458</a>
+            <a href="">Whatsapp us - <i class='fab'>&#xf232;</i> 9307901458</a>
+            <a href="">Email us - ✉ care@spareshub.com</a>
+
+        </div>
+        <div class="innerFooter">
+            <a href="#">Franchise</a>
+            <a href="Feedback.html">Feedback</a>
+            <a href="disclaimer.html">Disclaimer</a>
+            <a href="legal.html">Legal</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+        <div class="innerFooter">
+            <a href="sellers.html">Shipping Policy</a>
+            <a href="sellers.html">Refund Policy</a>
+            <a href="term&condition.html">Terms Conditions</a>
+            <a href="sellers.html">Connect With Us</a>
+        </div>
+        <div class="innerFooter">
+            <div id="innerfooter1">
+                <h3>Be the First to Know</h3>
+                <p>Get all the latest information on Events,
+                    Sales and Offers. Sign up for newsletter today.</p>
+
+            </div>
+            <div id="innerFooter2">
+                <p>Enter your email address</p>
+                <form action="">
+                    <input type="email">
+                    <input type="submit" value="Subscribe">
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <div class="blowFooter">
+        <p>
+            © 2017 Catalyst Retail Pvt. Ltd. All Rights Reserved. The website www.spareshub.com is owned and
+            operated by Catalyst Retail Pvt. Ltd. Your use of this website signifies your agreement to the terms of
+            use of this website. All brand and product names and associated logos contained within this website
+            belong to their respective owners and are protected by copyright. Names and Images above are for
+            representational purpose only to serve as a guide to the user of the website and SparesHub.com is in no
+            way associated with any of the above mentioned automobile manufacturers.
+        </p>
+    </div>
+</div>
+
+</body>
+<script src="navbar.js"></script>
+<script src = "cart.js"></script>
+<script>
+    var itemInCart = document.querySelector("#itemInCart");
+    var arr = JSON.parse(localStorage.getItem("cartList"));
+    console.log(arr);
+    itemInCart.innerText = arr.length;
+
+    function brands() {
+        var a = document.getElementById("brandBox");
+        a.style.display = "flex";
+    }
+
+    function brandsLeave() {
+        var a = document.getElementById("brandBox");
+        a.style.display = "none";
+    }
+
+    function categories() {
+        var a = document.getElementById("categoriesBox");
+        a.style.display = "flex";
+    }
+
+    function categoriesLeave() {
+        var a = document.getElementById("categoriesBox");
+        a.style.display = "none";
+    }
+
+    function manufactures() {
+        var a = document.getElementById("manufacturesBox");
+        a.style.display = "flex";
+        a.style.justifyContent = "spaceBetween";
+    }
+
+    function manufacturesLeave() {
+        var a = document.getElementById("manufacturesBox");
+        a.style.display = "none";
+    }
+
+    document.getElementById("logo").addEventListener("click" , function(){
+                  window.location.href = "./index.html";
+    })
+
+    document.getElementById("mobLogo").addEventListener("click" , function(){
+                  window.location.href = "./index.html";
+    })
+</script>
+<script src="careers.js"></script>
+</html>

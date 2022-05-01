@@ -5,9 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Disclaimer</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="./cart.css">
+    <link rel="stylesheet" href="cart.css">
 </head>
 <body>
 
@@ -20,11 +19,11 @@
             <div id="underWelcome">
                 <p style="color: #777; height: 0px; cursor: text; text-decoration: none;">WELCOME AT SPARESHUB.COM!</p>
                 <p style="color: #777;">|</p>
-                <p id="contact">CONTACT US</p>
+                <p id="contact"><a style="text-decoration: none;" href="contectUs.html">CONTACT US</a> </p>
                 <p style="color: #777;">|</p>
-                <p id="signin">SIGN IN</p>
+                <p id="signin"><a style="text-decoration: none;" href="logIn.html">SIGN IN</a></p>
                 <p style="color: #777;">|</p>
-                <p id="createAccount">CREATE ACCOUNT</p>
+                <p id="createAccount"><a style="text-decoration: none;" href="createAcc.html">CREATE ACCOUNT</a></p>
             </div>
         </div>
 
@@ -205,7 +204,7 @@
         <div class="upperFooter">
             <div class="innerFooter">
                 <a href="about.html">About Us</a>
-                <a href="">Contect Us</a>
+                <a href="contectUs.html">Contect Us</a>
                 <a href="">Call us - <i class='fab fa-whatsapp'>&#xf095;</i> 9307901458</a>
                 <a href="">Whatsapp us - <i class='fab'>&#xf232;</i> 9307901458</a>
                 <a href="">Email us - ✉ care@spareshub.com</a>
@@ -255,6 +254,51 @@
 
 </body>
 <script src="navbar.js"></script>
-<script src = "./cart.js"></script>
+<script src = "cart.js"></script>
+<script src="careers.js"></script>
+<script>
+    var itemInCart = document.querySelector("#itemInCart");
+    var arr = JSON.parse(localStorage.getItem("cartList"));
+    console.log(arr);
+    itemInCart.innerText = arr.length;
 
+    function brands() {
+        var a = document.getElementById("brandBox");
+        a.style.display = "flex";
+    }
+
+    function brandsLeave() {
+        var a = document.getElementById("brandBox");
+        a.style.display = "none";
+    }
+
+    function categories() {
+        var a = document.getElementById("categoriesBox");
+        a.style.display = "flex";
+    }
+
+    function categoriesLeave() {
+        var a = document.getElementById("categoriesBox");
+        a.style.display = "none";
+    }
+
+    function manufactures() {
+        var a = document.getElementById("manufacturesBox");
+        a.style.display = "flex";
+        a.style.justifyContent = "spaceBetween";
+    }
+
+    function manufacturesLeave() {
+        var a = document.getElementById("manufacturesBox");
+        a.style.display = "none";
+    }
+
+    document.getElementById("logo").addEventListener("click" , function(){
+                  window.location.href = "./index.html";
+    })
+
+    document.getElementById("mobLogo").addEventListener("click" , function(){
+                  window.location.href = "./index.html";
+    })
+</script>
 </html>

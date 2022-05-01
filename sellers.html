@@ -6,9 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sellers</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./cart.css">
     <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="cart.css">
 </head>
 
 <body>
@@ -23,11 +22,11 @@
             <div id="underWelcome">
                 <p style="color: #777; height: 0px; cursor: text; text-decoration: none;">WELCOME AT SPARESHUB.COM!</p>
                 <p style="color: #777;">|</p>
-                <p id="contact">CONTACT US</p>
+                <p id="contact"><a style="text-decoration: none;" href="contectUs.html">CONTACT US</a> </p>
                 <p style="color: #777;">|</p>
-                <p id="signin">SIGN IN</p>
+                <p id="signin"><a style="text-decoration: none;" href="logIn.html">SIGN IN</a></p>
                 <p style="color: #777;">|</p>
-                <p id="createAccount">CREATE ACCOUNT</p>
+                <p id="createAccount"><a style="text-decoration: none;" href="createAcc.html">CREATE ACCOUNT</a></p>
             </div>
         </div>
 
@@ -185,50 +184,6 @@
         
     </div>
 
-    <div id="mobile">
-        <div id="upline"
-            style="height: 3px; background-color: #2888CD; width: 100%;margin: auto; margin-top: -7.7px; margin-left: -7px;">
-        </div>
-        <div id="mobMain" style="display: flex; height: 50px;  justify-content: space-around; margin-top: 20px;">
-
-            <div id="mobLogo">
-                <img src="https://spareshub.com/pub/media/logo/stores/1/200x50xlogo.png.pagespeed.ic.3_mBb67eog.webp" alt="">
-            </div>
-
-            <div id="mobSearchMenuCart" style="display: flex; justify-content: space-between; margin-right: 8%;cursor: pointer;">
-                <div id="mobSearch">
-                    <img style="width: 30px; margin-top: 10px;" src="https://i.ibb.co/4MPMFh4/search.png" alt="">
-                </div>
-                <div id="mobMenu">
-                    <img style="width: 25px; margin-top: 10px; margin-left: 70%;cursor: pointer;" src="https://i.ibb.co/h2QbFWy/menu.png" alt="">
-                </div>
-                <div id="mobCart">
-                    <img style="width: 35px; margin-top: 5px; margin-left: 100%; cursor: pointer;" src="https://i.ibb.co/7QqbSmG/bag.png" alt="">
-                </div>
-            </div>
-        </div>
-
-        <div id="mobAfterMenu" style="width: 60%; height: 200px;  margin: auto; margin-top : 30px;color: #777; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-            <div id="mobl1" style="display: flex;">
-                <img style="height: 30px; margin-top: 10px; margin-right: 15px;" src="https://spareshub.com/pub/media/wysiwyg/xlargest_collection.png.pagespeed.ic.Hd9e6PSBf6.webp" alt="">
-                <p>LARGEST COLLECTION</p>
-            </div>
-            <div style = "display: flex;" id="mobl2">
-                <img style="height: 30px; margin-top: 10px; margin-right: 15px;" src="https://spareshub.com/pub/media/wysiwyg/xhighquality.png.pagespeed.ic.QNKPkwEyQU.webp" alt="">
-                <p>HIGH QUALITY PARTS WITH WARRANTY </p>
-            </div>
-            <div style = "display: flex;" id="mobl3">
-                <img style="height: 30px; margin-top: 10px; margin-right: 15px;" src="https://spareshub.com/pub/media/wysiwyg/xsslcert.png.pagespeed.ic.-4v_2JWiOF.webp" alt="">
-                <p>SSL CERTIFIED TRANSACTION</p>
-            </div>
-            <div style = "display: flex;" id="mobl4">
-                <img style="height: 30px; margin-top: 10px; margin-right: 15px;" src="https://spareshub.com/pub/media/wysiwyg/xontimedel.png.pagespeed.ic.qKhFo47NUn.webp" alt="">
-                <p>ON - TIME DELIVERY</p>
-            </div>
-        </div>
-    </div>
-
-
 
 
     <!-- --------------navbar-------------------- -->
@@ -278,7 +233,11 @@
                     src="https://spareshub.com/pub/media/wysiwyg/xseller_procedure.jpg.pagespeed.ic.3oBc_NNMLj.webp"
                     alt="">
             </div>
+<<<<<<< HEAD
+            <div class="privacy-box-container" >
+=======
             <div class="privacy-box-container">
+>>>>>>> e79013af9dcec6d9922a550a7989a9bb85c72817
                 <div class="privacy-carts" style="width: 60">
                     <div class="privacy-cart" >
                         <h3>1</h3>
@@ -353,7 +312,7 @@
         <div class="upperFooter">
             <div class="innerFooter">
                 <a href="about.html">About Us</a>
-                <a href="">Contect Us</a>
+                <a href="contectUs.html">Contect Us</a>
                 <a href="">Call us - <i class='fab fa-whatsapp'>&#xf095;</i> 9307901458</a>
                 <a href="">Whatsapp us - <i class='fab'>&#xf232;</i> 9307901458</a>
                 <a href="">Email us - ✉ care@spareshub.com</a>
@@ -402,7 +361,52 @@
     </div>
 
 </body>
-<script src = "./cart.js"></script>
 <script src="navbar.js"></script>
+<script src = "cart.js"></script>
+<script>
+    var itemInCart = document.querySelector("#itemInCart");
+    var arr = JSON.parse(localStorage.getItem("cartList"));
+    console.log(arr);
+    itemInCart.innerText = arr.length;
 
+    function brands() {
+        var a = document.getElementById("brandBox");
+        a.style.display = "flex";
+    }
+
+    function brandsLeave() {
+        var a = document.getElementById("brandBox");
+        a.style.display = "none";
+    }
+
+    function categories() {
+        var a = document.getElementById("categoriesBox");
+        a.style.display = "flex";
+    }
+
+    function categoriesLeave() {
+        var a = document.getElementById("categoriesBox");
+        a.style.display = "none";
+    }
+
+    function manufactures() {
+        var a = document.getElementById("manufacturesBox");
+        a.style.display = "flex";
+        a.style.justifyContent = "spaceBetween";
+    }
+
+    function manufacturesLeave() {
+        var a = document.getElementById("manufacturesBox");
+        a.style.display = "none";
+    }
+
+    document.getElementById("logo").addEventListener("click" , function(){
+                  window.location.href = "./index.html";
+    })
+
+    document.getElementById("mobLogo").addEventListener("click" , function(){
+                  window.location.href = "./index.html";
+    })
+</script>
+<script src="careers.js"></script>
 </html>

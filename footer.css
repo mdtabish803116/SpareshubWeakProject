@@ -471,7 +471,7 @@ img {
     display: flex;
 }
 
-@media all and (min-width: 60px) and (max-width: 600px){
+@media all and (min-width: 60px) and (max-width: 800px){
     .privacy-box-container {
         display: block;
     }
@@ -482,9 +482,13 @@ img {
 
 /* ------------------ navbar ----------------- */
 
-#mobile{
-    display:none;
+
+
+
+#mobile {
+    display: none;
 }
+
 #welcome {
     height: 28px;
     margin: none;
@@ -566,7 +570,6 @@ img {
 #navCart {
     width: 30%;
     margin-right: 20px;
-    cursor : pointer;
 }
 
 #cartIcon {
@@ -589,7 +592,7 @@ img {
     font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-#underAfterMain{
+#underAfterMain {
     display: flex;
     width: 45%;
     justify-content: space-between;
@@ -597,7 +600,7 @@ img {
     margin-left: 40px;
 }
 
-#underAfterMain button{
+#underAfterMain button {
     color: #2888CD;
     cursor: pointer;
     font-size: 12px;
@@ -605,63 +608,48 @@ img {
     border-radius: 3px;
 }
 
-#brandBox{
+#brandBox {
     width: 70%;
     height: 300px;
     display: none;
     background-color: #2888CD;
     margin-left: 100px;
-    z-index : 2;
 }
 
-#categoriesBox{
+#categoriesBox {
     width: 70%;
     height: 300px;
     display: none;
     background-color: #2888CD;
     margin-left: 100px;
-    z-index : 2;
 }
 
-#manufacturesBox{
+#manufacturesBox {
     width: 70%;
     height: 300px;
     display: none;
     background-color: #2888CD;
     margin-left: 100px;
-    z-index : 2;
 }
 
-#brandText p{
+#brandText p {
     text-align: center;
 }
 
-#underAfterMain button:hover{
+#underAfterMain button:hover {
     background-color: #2888CD;
     color: white;
 }
 
-#mobile #mobCart , #mobile #mobLogo , #main #logo{
-    cursor : pointer;
-}
-
-#mobAfterMenu img {
-    width : 30px;
-    /* height : 20px; */
-}
-
-@media  (max-width: 800px){
-    #deskNav{
+@media (max-width: 800px) {
+    #deskNav {
         display: none;
     }
 
-    #mobile{
+    #mobile {
         display: contents;
     }
 }
-
-
-
 
 
         @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
@@ -714,7 +702,6 @@ img {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             margin: auto;
-            position : relative;
 
         }
 
@@ -787,8 +774,7 @@ img {
             display: flex;
             align-items: center;
             justify-content: center;
-            position : absolute;
-            /* position: relative; */
+            position: relative;
             top: -20px;
             /* left: 16px; */
             background-color: rgb(33, 164, 211);
