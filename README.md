@@ -1,5 +1,5 @@
 This is a online store that carers to provide different type of car and bikes spare parts. Here order products and make payment online.
-[GO LIVE](https://spareshub-website-clone.netlify.app/)
+[GO LIVE](https://spareshubclone.netlify.app/)
 
 <hr/>
 
@@ -7,4 +7,4 @@ This is a online store that carers to provide different type of car and bikes sp
 
 
 
-<img src = "https://spareshub-website-clone.netlify.app/img/cars1.png"/>
+<img src = "https://spareshubclone.netlify.app/img/cars1.png"/>
